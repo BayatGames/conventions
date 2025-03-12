@@ -1,4 +1,4 @@
-# Conventions | Git - Repositories
+# Git Repositories Conventions
 
 This document outlines Bayat's repository conventions, guidelines, and standards. It provides a comprehensive framework for repository management that integrates with the [Bayat Git Flow](./flow.md) and [Commit Conventions](./commits.md) to ensure consistency across all project types.
 
