@@ -42,6 +42,10 @@ Framework-specific conventions and best practices:
 - [Angular](frameworks/angular.md) - Angular development standards
 - [Flutter](frameworks/flutter.md) - Flutter and Dart best practices
 - [Node.js](frameworks/nodejs.md) - Node.js development guidelines
+- [Electron.js](frameworks/electron.md) - Electron.js desktop application standards
+- [Tauri](frameworks/tauri.md) - Tauri desktop application guidelines
+- [Qt](frameworks/qt.md) - Qt framework development standards
+- [.NET MAUI](frameworks/maui.md) - .NET MAUI cross-platform application guidelines
 
 ### Quality Assurance
 
@@ -94,6 +98,8 @@ Standards for specific project types:
 - [Game Development](projects/games.md) - Game-specific standards and patterns
 - [Web Applications](projects/web.md) - Web application standards
 - [Mobile Applications](projects/mobile.md) - Mobile application standards
+- [Desktop Applications](projects/desktop.md) - Desktop application standards and patterns
+- [Native Multi-Platform](projects/native-multiplatform.md) - Standards for native multi-platform development
 - [Libraries and Packages](projects/libraries.md) - Standards for building libraries
 
 ### Development Environment
