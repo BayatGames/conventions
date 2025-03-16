@@ -199,7 +199,7 @@ session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
 
 ```yaml
 # electron-builder.yml
-appId: com.bayat.appname
+appId: io.bayat.appname
 productName: AppName
 directories:
   output: dist

@@ -248,12 +248,12 @@ info:
   version: 1.0.0
   contact:
     name: Bayat API Team
-    email: api@bayat.com
-    url: https://docs.bayat.com
+    email: api@bayat.io
+    url: https://docs.bayat.io
 servers:
-  - url: https://api.bayat.com/v1
+  - url: https://api.bayat.io/v1
     description: Production server
-  - url: https://api.staging.bayat.com/v1
+  - url: https://api.staging.bayat.io/v1
     description: Staging server
 paths:
   /users:
@@ -460,7 +460,7 @@ This flow is recommended for server-side applications.
 
 1. Direct the user to:
    ```
-   https://auth.bayat.com/oauth/authorize?
+   https://auth.bayat.io/oauth/authorize?
      response_type=code&
      client_id=YOUR_CLIENT_ID&
      redirect_uri=YOUR_REDIRECT_URI&
@@ -475,7 +475,7 @@ This flow is recommended for server-side applications.
 
 3. Exchange the code for an access token:
    ```bash
-   curl -X POST https://auth.bayat.com/oauth/token \
+   curl -X POST https://auth.bayat.io/oauth/token \
      -d 'grant_type=authorization_code' \
      -d 'client_id=YOUR_CLIENT_ID' \
      -d 'client_secret=YOUR_CLIENT_SECRET' \
@@ -496,7 +496,7 @@ This flow is recommended for server-side applications.
 
 5. Use the access token in API requests:
    ```bash
-   curl -H "Authorization: Bearer ACCESS_TOKEN" https://api.bayat.com/v1/users/me
+   curl -H "Authorization: Bearer ACCESS_TOKEN" https://api.bayat.io/v1/users/me
    ```
 ```
 
@@ -591,8 +591,8 @@ API versioning documentation must include:
 Our API uses URL-based versioning, with the version as the first path segment:
 
 ```
-https://api.bayat.com/v1/resources
-https://api.bayat.com/v2/resources
+https://api.bayat.io/v1/resources
+https://api.bayat.io/v2/resources
 ```
 
 ## Current Versions
@@ -622,7 +622,7 @@ V2 includes the following breaking changes:
    - Only OAuth 2.0 is supported (Basic Auth removed)
    - Tokens expire after 24 hours (was 7 days in v1)
 
-See our [detailed migration guide](https://docs.bayat.com/api/migration/v1-to-v2) for code examples.
+See our [detailed migration guide](https://docs.bayat.io/api/migration/v1-to-v2) for code examples.
 ```
 
 ## Internationalization (i18n)

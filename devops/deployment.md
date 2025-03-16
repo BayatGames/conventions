@@ -377,7 +377,7 @@ ingress:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-    - host: myapp.bayat.com
+    - host: myapp.bayat.io
       paths:
         - path: /
           pathType: Prefix

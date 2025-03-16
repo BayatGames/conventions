@@ -107,7 +107,7 @@ project-root/
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.bayat.appname",
+      "identifier": "io.bayat.appname",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

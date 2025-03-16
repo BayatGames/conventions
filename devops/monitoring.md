@@ -261,8 +261,8 @@ Suggested Actions:
 2. Verify database connectivity
 3. Review recent deployments
 
-Runbook: https://runbooks.bayat.com/payment-service/high-error-rate
-Dashboard: https://dashboards.bayat.com/payment-service
+Runbook: https://runbooks.bayat.io/payment-service/high-error-rate
+Dashboard: https://dashboards.bayat.io/payment-service
 ```
 
 ### Alert Rules
@@ -419,7 +419,7 @@ groups:
     annotations:
       summary: "High HTTP error rate on {{ $labels.instance }}"
       description: "Error rate is {{ $value | humanizePercentage }} for the past 5 minutes"
-      runbook: "https://runbooks.bayat.com/api/high-error-rate"
+      runbook: "https://runbooks.bayat.io/api/high-error-rate"
 ```
 
 ## Health Checks

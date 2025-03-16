@@ -314,12 +314,12 @@ QQmlApplicationEngine engine;
 engine.rootContext()->setContextProperty("dataModel", &dataModel);
 
 // Registering types
-qmlRegisterType<UserModel>("com.bayat.models", 1, 0, "UserModel");
+qmlRegisterType<UserModel>("io.bayat.models", 1, 0, "UserModel");
 ```
 
 ```qml
 // In QML
-import com.bayat.models 1.0
+import io.bayat.models 1.0
 
 UserModel {
     id: userModel

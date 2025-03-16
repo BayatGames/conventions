@@ -610,9 +610,9 @@ Example Service Registry Entry:
 name: order-service
 description: Manages order creation and processing
 team: commerce
-owner: commerce-team@bayat.com
-repository: https://git.bayat.com/commerce/order-service
-api-documentation: https://docs.bayat.com/apis/order-service
+owner: commerce-team@bayat.io
+repository: https://git.bayat.io/commerce/order-service
+api-documentation: https://docs.bayat.io/apis/order-service
 dependencies:
   - user-service
   - product-service

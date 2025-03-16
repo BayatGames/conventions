@@ -31,6 +31,17 @@ Language-specific conventions for coding style, patterns, and best practices:
 - [TypeScript](languages/typescript.md) - TypeScript-specific guidelines
 - [Python](languages/python.md) - Python coding standards
 - [C++](languages/cpp.md) - C++ development guidelines
+- [C](languages/c.md) - C development standards
+- [Java](languages/java.md) - Java development standards
+- [Rust](languages/rust.md) - Rust development standards
+- [Go](languages/go.md) - Go development guidelines
+- [Swift](languages/swift.md) - Swift development standards for Apple platforms
+- [Kotlin](languages/kotlin.md) - Kotlin development standards
+- [PHP](languages/php.md) - PHP development standards
+- [Ruby](languages/ruby.md) - Ruby development standards
+- [Dart](languages/dart.md) - Dart development standards
+- [Lua](languages/lua.md) - Lua development standards
+- [Solidity](languages/solidity.md) - Solidity blockchain development standards
 
 ### Frameworks
 
@@ -72,6 +83,7 @@ DevOps practices and standards:
 - [Infrastructure as Code](devops/infrastructure.md) - IaC standards and patterns
 - [Monitoring](devops/monitoring.md) - Application and system monitoring standards
 - [Containerization](devops/containers.md) - Docker and container best practices
+- [Disaster Recovery](devops/disaster-recovery.md) - Disaster recovery and business continuity standards
 
 ### Security
 
@@ -81,6 +93,8 @@ Security standards and best practices:
 - [Authentication](security/authentication.md) - Authentication best practices
 - [Data Protection](security/data-protection.md) - Data security standards
 - [Vulnerability Management](security/vulnerabilities.md) - Handling security vulnerabilities
+- [DevSecOps](security/devsecops.md) - DevSecOps practices and integration
+- [Supply Chain Security](security/supply-chain.md) - Software supply chain security standards
 
 ### Project Architecture
 
@@ -90,6 +104,19 @@ Architecture standards:
 - [Monoliths](architecture/monoliths.md) - Monolithic application architecture
 - [Frontend Architecture](architecture/frontend.md) - Frontend architecture patterns
 - [Backend Architecture](architecture/backend.md) - Backend architecture patterns
+- [Cloud-Native](architecture/cloud-native.md) - Cloud-native application architecture
+- [API Design](architecture/api-design.md) - API design standards and best practices
+- [Database Standards](architecture/database-standards.md) - Database design and management standards
+- [Technical Debt](architecture/technical-debt.md) - Technical debt management
+- [Performance Engineering](architecture/performance-engineering.md) - Performance engineering standards
+- [Emerging Technologies](architecture/emerging-technologies.md) - Guidelines for AI/ML, AR/VR, IoT, and edge computing
+- [Serverless](architecture/serverless.md) - Serverless architecture guidelines
+- [Blockchain and Web3](architecture/blockchain-web3.md) - Blockchain and Web3 development standards
+- [AI and ML Integration](architecture/ai-ml-integration.md) - AI and machine learning integration standards
+- [Data Engineering](architecture/data-engineering.md) - Data engineering and analytics standards
+- [Legacy Modernization](architecture/legacy-modernization.md) - Legacy system modernization guidelines
+- [Quantum Computing](architecture/quantum-computing.md) - Quantum computing readiness guidelines
+- [Low-Code/No-Code](architecture/low-code-no-code.md) - Low-code/no-code integration guidelines
 
 ### Project-Specific Standards
 
@@ -101,6 +128,10 @@ Standards for specific project types:
 - [Desktop Applications](projects/desktop.md) - Desktop application standards and patterns
 - [Native Multi-Platform](projects/native-multiplatform.md) - Standards for native multi-platform development
 - [Libraries and Packages](projects/libraries.md) - Standards for building libraries
+- [Progressive Web Apps](projects/pwa-standards.md) - PWA development standards
+- [Design Systems](projects/design-systems.md) - Design system development and maintenance
+- [Embedded Systems and IoT](projects/embedded-iot.md) - Embedded systems and IoT development standards
+- [AR/VR/XR](projects/ar-vr-xr.md) - Augmented, virtual, and mixed reality development standards
 
 ### Development Environment
 
@@ -128,6 +159,9 @@ Standards for cross-cutting concerns:
 - [Accessibility](cross-functional/accessibility.md) - Accessibility compliance guidelines
 - [Internationalization](cross-functional/internationalization.md) - Internationalization and localization standards
 - [Performance](cross-functional/performance.md) - Performance optimization guidelines
+- [Green Software](cross-functional/green-software.md) - Green software engineering standards
+- [Cultural and Regional](cross-functional/cultural-regional.md) - Cultural and regional considerations in software development
+- [Ethical AI](cross-functional/ethical-ai.md) - Ethical AI and responsible technology development
 
 ### Team Collaboration
 
