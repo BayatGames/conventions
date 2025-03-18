@@ -91,6 +91,7 @@ Security standards and best practices:
 
 - [Secure Coding](security/coding.md) - Secure coding guidelines
 - [Authentication](security/authentication.md) - Authentication best practices
+- [Password Policy](security/password-policy.md) - Comprehensive password standards and implementation
 - [Data Protection](security/data-protection.md) - Data security standards
 - [Vulnerability Management](security/vulnerabilities.md) - Handling security vulnerabilities
 - [DevSecOps](security/devsecops.md) - DevSecOps practices and integration

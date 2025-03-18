@@ -40,6 +40,7 @@ This document outlines Bayat's standards and best practices for implementing sec
   - Special characters
 - **Prohibit Common Passwords**: Block the top 10,000 most common passwords
 - **Context-specific Banned Words**: Prevent use of application name, username, and other context-specific terms
+- **Detailed Standards**: For comprehensive password requirements, policies, and implementation guidelines, refer to our [Password Policy and Conventions](password-policy.md) document
 
 ### Password Storage
 
@@ -47,6 +48,7 @@ This document outlines Bayat's standards and best practices for implementing sec
 - **Never Store Plaintext Passwords**: Even temporarily
 - **Salt All Passwords**: Use unique, random salts for each password
 - **Implement Pepper**: Add a server-side secret to password hashing when possible
+- **Implementation Details**: For detailed implementation guidance, see the [Password Policy and Conventions](password-policy.md) document
 
 ### Password Policies
 
@@ -54,6 +56,7 @@ This document outlines Bayat's standards and best practices for implementing sec
 - **Password Change Verification**: Require current password to set a new one
 - **Prevent Password Reuse**: Maintain history of password hashes to prevent reuse
 - **Sensitive Account Lockout**: Implement progressive delays or temporary lockouts after multiple failed attempts
+- **Advanced Policies**: For more detailed password lifecycle management, account recovery, and special account policies, refer to the [Password Policy and Conventions](password-policy.md) document
 
 ## Multi-Factor Authentication (MFA)
 
