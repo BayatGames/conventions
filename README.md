@@ -21,6 +21,7 @@ The conventions are organized into the following categories:
 - [Git Flow](git/flow.md) - Branching strategy and workflow
 - [Commit Conventions](git/commits.md) - Standards for commit messages
 - [Repository Structure](git/repos.md) - Organization and configuration of repositories
+- [Multi-Repository Management](cross-functional/multi-repository-standards.md) - Standards for managing multiple repositories
 
 ### Languages
 
@@ -58,6 +59,16 @@ Framework-specific conventions and best practices:
 - [Qt](frameworks/qt.md) - Qt framework development standards
 - [.NET MAUI](frameworks/maui.md) - .NET MAUI cross-platform application guidelines
 
+### Process & Workflows
+
+Standards for development processes and team workflows:
+
+- [Documentation Standards](process/documentation-standards.md) - Guidelines for creating and maintaining documentation
+- [Onboarding Journey](process/onboarding-journey.md) - Structured approach to developer onboarding
+- [Code Review Automation](process/code-review-automation.md) - Standards for automating code review processes
+- [Developer Experience Optimization](process/developer-experience-optimization.md) - Standards for improving developer workflows and productivity
+- [Knowledge Management Protocol](process/knowledge-management-protocol.md) - Standards for documentation maintenance and knowledge sharing
+
 ### Quality Assurance
 
 Standards for ensuring quality:
@@ -85,6 +96,7 @@ DevOps practices and standards:
 - [Deployment](devops/deployment.md) - Deployment processes and environments
 - [Infrastructure as Code](devops/infrastructure.md) - IaC standards and patterns
 - [Monitoring](devops/monitoring.md) - Application and system monitoring standards
+- [Performance Monitoring](devops/performance-monitoring-standards.md) - Standards for application performance monitoring
 - [Containerization](devops/containers.md) - Docker and container best practices
 - [Disaster Recovery](devops/disaster-recovery.md) - Disaster recovery and business continuity standards
 - [Incident Response](devops/incident-response.md) - Incident response and postmortem processes
@@ -100,6 +112,11 @@ Security standards and best practices:
 - [Vulnerability Management](security/vulnerabilities.md) - Handling security vulnerabilities
 - [DevSecOps](security/devsecops.md) - DevSecOps practices and integration
 - [Supply Chain Security](security/supply-chain.md) - Software supply chain security standards
+- [AI Governance](security/ai-governance.md) - Policies for responsible AI development and deployment
+- [Compliance Automation](security/compliance-automation.md) - Standards for automating compliance checks
+- [Zero Trust Security](security/zero-trust-security.md) - Zero trust security implementation
+- [Certificates and Compliance](security/certificates-and-compliance.md) - Certificate management and compliance
+- [SAST/DAST](security/sast-dast.md) - Static and Dynamic Application Security Testing
 
 ### Project Architecture
 
@@ -117,6 +134,8 @@ Architecture standards:
 - [API Versioning](architecture/api-versioning.md) - API versioning and deprecation strategy
 - [Database Standards](architecture/database-standards.md) - Database design and management standards
 - [Technical Debt](architecture/technical-debt.md) - Technical debt management
+- [Technical Debt Quantification](architecture/technical-debt-quantification.md) - Methods for measuring technical debt
+- [Technical Debt Management](architecture/technical-debt-management.md) - Strategies for managing technical debt
 - [Performance Engineering](architecture/performance-engineering.md) - Performance engineering standards
 - [Emerging Technologies](architecture/emerging-technologies.md) - Guidelines for AI/ML, AR/VR, IoT, and edge computing
 - [Tech Radar](architecture/tech-radar.md) - Technology recommendations and adoption guidance
@@ -124,10 +143,18 @@ Architecture standards:
 - [Blockchain and Web3](architecture/blockchain-web3.md) - Blockchain and Web3 development standards
 - [AI and ML Integration](architecture/ai-ml-integration.md) - AI and machine learning integration standards
 - [AI Engineering](architecture/ai-engineering.md) - AI systems development, deployment, and maintenance standards
+- [AI/ML Engineering Standards](architecture/ai-ml-engineering-standards.md) - Comprehensive AI/ML engineering standards
+- [MLOps](architecture/mlops.md) - Machine learning operations standards and best practices
+- [Edge Computing](architecture/edge-computing.md) - Edge computing architecture and implementation standards
 - [Data Engineering](architecture/data-engineering.md) - Data engineering and analytics standards
+- [Data Engineering Governance](architecture/data-engineering-governance.md) - Data governance and management
 - [Legacy Modernization](architecture/legacy-modernization.md) - Legacy system modernization guidelines
 - [Quantum Computing](architecture/quantum-computing.md) - Quantum computing readiness guidelines
 - [Low-Code/No-Code](architecture/low-code-no-code.md) - Low-code/no-code integration guidelines
+- [Architecture Decision Records](architecture/architecture-decision-records.md) - Standards for documenting architectural decisions
+- [Platform Engineering](architecture/platform-engineering.md) - Platform engineering standards
+- [GraphQL Standards](architecture/graphql-standards.md) - Standards for GraphQL API development
+- [Event-Driven Architecture](architecture/event-driven-architecture.md) - Detailed event-driven architecture standards
 
 ### Project-Specific Standards
 
@@ -180,6 +207,7 @@ Standards for cross-cutting concerns:
 - [Cultural and Regional](cross-functional/cultural-regional.md) - Cultural and regional considerations in software development
 - [Ethical AI](cross-functional/ethical-ai.md) - Ethical AI and responsible technology development
 - [Dark Mode Implementation](cross-functional/dark-mode.md) - Guidelines for implementing dark mode across all platforms
+- [Inclusive Engineering](cross-functional/inclusive-engineering.md) - Standards for creating inclusive software
 
 ### Team Collaboration
 
@@ -189,12 +217,14 @@ Guidelines for team collaboration:
 - [Remote Collaboration](collaboration/remote-collaboration.md) - Standards and best practices for effective remote collaboration
 - [Community Contribution](collaboration/community-contribution.md) - Guidelines for external contributions to open-source projects
 - [Mentorship and Knowledge Sharing](collaboration/mentorship.md) - Structured approach to internal knowledge transfer and technical mentorship
+- [Community Standards](collaboration/community-standards.md) - Standards for community engagement and governance
 
 ### Learning Resources
 
 Curated learning resources:
 
 - [Learning Resources](learning/resources.md) - Recommended books, courses, and resources for various technologies
+- [Knowledge Management](learning/knowledge-management.md) - Knowledge management standards and practices
 
 ### Project Templates and Starter Kits
 
@@ -221,6 +251,36 @@ Guidelines for versioning:
 ## Using These Conventions
 
 All team members are expected to follow these conventions for new projects and when contributing to existing ones. For legacy projects that don't follow these standards, a migration plan should be created when significant changes are planned.
+
+### Validation and Consistency
+
+To ensure documentation consistency and completeness:
+
+1. Use the validation script to check if all documentation files are properly referenced:
+
+   ```bash
+   make validate
+   ```
+
+2. Check for broken links in documentation:
+
+   ```bash
+   make check-links
+   ```
+
+3. Run all validation checks at once:
+
+   ```bash
+   make check-all
+   ```
+
+### Document Templates
+
+When creating new documentation files:
+
+1. Use the document version header template from `templates/document-version-header.md`
+2. Follow the section organization guide in `templates/section-organization.md`
+3. Keep documentation up to date, with correct version information
 
 ## Contributing to Conventions
 
