@@ -1,0 +1,26 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+' Use LAYOUT_WITH_LEGEND() to add a legend
+LAYOUT_WITH_LEGEND()
+
+title System Context diagram for [System Name]
+
+' Define users/actors
+Person(user, "User", "Description of the user")
+Person(admin, "Administrator", "Description of the administrator")
+
+' Define the system
+System(system, "System Name", "Description of the system")
+
+' Define external systems
+System_Ext(external_system1, "External System 1", "Description of external system 1")
+System_Ext(external_system2, "External System 2", "Description of external system 2")
+
+' Define relationships
+Rel(user, system, "Uses", "Protocol (e.g., HTTPS)")
+Rel(admin, system, "Manages", "Protocol (e.g., HTTPS)")
+Rel(system, external_system1, "Interacts with", "Protocol/Method")
+Rel(system, external_system2, "Interacts with", "Protocol/Method")
+
+@enduml

@@ -1,0 +1,58 @@
+name: Documentation Validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        required: true
+        default: main
+#   push:
+#     branches: [ main, master ]
+#     paths:
+#       - '**/*.md'
+#       - 'scripts/**'
+#       - '.github/workflows/documentation-validation.yml'
+#   pull_request:
+#     branches: [ main, master ]
+#     paths:
+#       - '**/*.md'
+#       - 'scripts/**'
+#       - '.github/workflows/documentation-validation.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y make
+
+      - name: Run documentation validation
+        run: make validate
+
+      - name: Check for broken links
+        run: make check-links
+
+      - name: Verify document headers
+        run: |
+          # Run add-headers and check if any changes were made
+          make add-headers
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "::error::Some documentation files are missing proper headers. Please run 'make add-headers' locally and commit the changes."
+            git diff
+            exit 1
+          fi
+
+      - name: Check Last Updated dates
+        run: |
+          # Run update-versions and check if any changes were made
+          make update-versions
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "::warning::Some documentation files have outdated 'Last Updated' dates. Consider running 'make update-versions' locally."
+            git diff
+          fi 

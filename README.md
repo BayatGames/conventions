@@ -12,6 +12,13 @@ The purpose of these conventions is to:
 4. **Enable Collaboration**: Make it easier for team members to work on different projects
 5. **Simplify Onboarding**: Provide clear guidance for new team members
 
+## Getting Started
+
+- **New Developers**: Start with our [Developer Onboarding Path](docs/process/developer-onboarding-path.md)
+- **Contributing**: Read our [Contribution Guidelines](CONTRIBUTING.md)
+- **Recent Changes**: View our [Changelog](CHANGELOG.md)
+- **Self-Assessment**: Use our [Compliance Checklist](docs/quality/compliance-checklist.md)
+
 ## Structure
 
 The conventions are organized into the following categories:
