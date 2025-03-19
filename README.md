@@ -63,8 +63,11 @@ Framework-specific conventions and best practices:
 Standards for ensuring quality:
 
 - [Testing](quality/testing.md) - Testing strategies and requirements
+- [Frontend Testing](quality/frontend-testing.md) - Comprehensive frontend testing best practices
 - [Code Reviews](quality/code-reviews.md) - Code review process and checklist
 - [CI/CD](quality/ci-cd.md) - Continuous integration and deployment standards
+- [Code Generation](quality/code-generation.md) - Standards for using AI-assisted code generation tools
+- [Code Refactoring](quality/code-refactoring.md) - Guidelines for when and how to approach code refactoring
 
 ### Documentation
 
@@ -84,6 +87,7 @@ DevOps practices and standards:
 - [Monitoring](devops/monitoring.md) - Application and system monitoring standards
 - [Containerization](devops/containers.md) - Docker and container best practices
 - [Disaster Recovery](devops/disaster-recovery.md) - Disaster recovery and business continuity standards
+- [Incident Response](devops/incident-response.md) - Incident response and postmortem processes
 
 ### Security
 
@@ -105,15 +109,21 @@ Architecture standards:
 - [Monoliths](architecture/monoliths.md) - Monolithic application architecture
 - [Frontend Architecture](architecture/frontend.md) - Frontend architecture patterns
 - [Backend Architecture](architecture/backend.md) - Backend architecture patterns
+- [Event-Driven Architecture](architecture/event-driven.md) - Event-driven architecture patterns and best practices
+- [Feature Flags](architecture/feature-flags.md) - Feature flag implementation standards and strategies
 - [Cloud-Native](architecture/cloud-native.md) - Cloud-native application architecture
+- [Cloud Providers](architecture/cloud-providers.md) - Cloud provider-specific guidelines and best practices
 - [API Design](architecture/api-design.md) - API design standards and best practices
+- [API Versioning](architecture/api-versioning.md) - API versioning and deprecation strategy
 - [Database Standards](architecture/database-standards.md) - Database design and management standards
 - [Technical Debt](architecture/technical-debt.md) - Technical debt management
 - [Performance Engineering](architecture/performance-engineering.md) - Performance engineering standards
 - [Emerging Technologies](architecture/emerging-technologies.md) - Guidelines for AI/ML, AR/VR, IoT, and edge computing
+- [Tech Radar](architecture/tech-radar.md) - Technology recommendations and adoption guidance
 - [Serverless](architecture/serverless.md) - Serverless architecture guidelines
 - [Blockchain and Web3](architecture/blockchain-web3.md) - Blockchain and Web3 development standards
 - [AI and ML Integration](architecture/ai-ml-integration.md) - AI and machine learning integration standards
+- [AI Engineering](architecture/ai-engineering.md) - AI systems development, deployment, and maintenance standards
 - [Data Engineering](architecture/data-engineering.md) - Data engineering and analytics standards
 - [Legacy Modernization](architecture/legacy-modernization.md) - Legacy system modernization guidelines
 - [Quantum Computing](architecture/quantum-computing.md) - Quantum computing readiness guidelines
@@ -126,8 +136,10 @@ Standards for specific project types:
 - [Game Development](projects/games.md) - Game-specific standards and patterns
 - [Web Applications](projects/web.md) - Web application standards
 - [Mobile Applications](projects/mobile.md) - Mobile application standards
+- [Mobile Development (Native)](projects/mobile-native.md) - Native iOS and Android development best practices
 - [Desktop Applications](projects/desktop.md) - Desktop application standards and patterns
 - [Native Multi-Platform](projects/native-multiplatform.md) - Standards for native multi-platform development
+- [Cross-Platform Code Sharing](projects/cross-platform-sharing.md) - Strategies for sharing code between web, mobile, and desktop platforms
 - [Libraries and Packages](projects/libraries.md) - Standards for building libraries
 - [Progressive Web Apps](projects/pwa-standards.md) - PWA development standards
 - [Design Systems](projects/design-systems.md) - Design system development and maintenance
@@ -145,6 +157,7 @@ Standards for development environment setup:
 Guidelines for managing dependencies:
 
 - [Dependency Management](dependencies/management.md) - Best practices for managing external and internal dependencies
+- [Dependency Upgrade Strategies](dependencies/upgrade-strategies.md) - Comprehensive standards for evaluating, upgrading, and maintaining dependencies
 
 ### Release Management
 
@@ -158,17 +171,24 @@ Standards for release processes:
 Standards for cross-cutting concerns:
 
 - [Accessibility](cross-functional/accessibility.md) - Accessibility compliance guidelines
+- [Accessibility Testing](cross-functional/accessibility-testing.md) - Comprehensive accessibility testing standards and procedures
 - [Internationalization](cross-functional/internationalization.md) - Internationalization and localization standards
 - [Performance](cross-functional/performance.md) - Performance optimization guidelines
+- [Performance Budgets](cross-functional/performance-budgets.md) - Specific metrics, targets, and measurement approaches for performance
+- [Frontend Optimization](cross-functional/frontend-optimization.md) - Frontend performance optimization techniques and standards
 - [Green Software](cross-functional/green-software.md) - Green software engineering standards
 - [Cultural and Regional](cross-functional/cultural-regional.md) - Cultural and regional considerations in software development
 - [Ethical AI](cross-functional/ethical-ai.md) - Ethical AI and responsible technology development
+- [Dark Mode Implementation](cross-functional/dark-mode.md) - Guidelines for implementing dark mode across all platforms
 
 ### Team Collaboration
 
 Guidelines for team collaboration:
 
 - [Team Collaboration](collaboration/team-collaboration.md) - Standards for communication, meetings, and collaborative processes
+- [Remote Collaboration](collaboration/remote-collaboration.md) - Standards and best practices for effective remote collaboration
+- [Community Contribution](collaboration/community-contribution.md) - Guidelines for external contributions to open-source projects
+- [Mentorship and Knowledge Sharing](collaboration/mentorship.md) - Structured approach to internal knowledge transfer and technical mentorship
 
 ### Learning Resources
 

@@ -5,12 +5,14 @@ This document outlines the standards and best practices for developing augmented
 ## Platform Selection
 
 ### Hardware Platforms
+
 - **VR Headsets**: Selection criteria for PC-connected vs. standalone headsets
 - **AR Devices**: Guidelines for choosing between mobile AR, AR glasses, and enterprise headsets
 - **Mixed Reality**: Standards for Microsoft HoloLens and similar devices
 - **Mobile AR**: Best practices for iOS (ARKit) and Android (ARCore) development
 
 ### Development Frameworks
+
 - **Unity**: Primary framework for cross-platform XR development
 - **Unreal Engine**: For graphics-intensive and high-fidelity XR experiences
 - **Native SDKs**: Guidelines for native development with ARKit, ARCore, etc.
@@ -19,6 +21,7 @@ This document outlines the standards and best practices for developing augmented
 ## Design and User Experience
 
 ### Spatial Design
+
 1. **World Scale**:
    - Consistent scale guidelines for object representation
    - World scale considerations for different devices
@@ -35,6 +38,7 @@ This document outlines the standards and best practices for developing augmented
    - Ambient sound design patterns
 
 ### User Interaction
+
 1. **Input Methods**:
    - Hand tracking implementation patterns
    - Controller-based interaction guidelines
@@ -54,6 +58,7 @@ This document outlines the standards and best practices for developing augmented
    - Multi-sensory feedback coordination
 
 ### Locomotion and Navigation
+
 - **VR Locomotion**: Guidelines for teleportation, continuous movement, and comfort settings
 - **AR Navigation**: Standards for wayfinding and spatial anchors
 - **Comfort and Safety**: Required comfort settings and user control
@@ -61,6 +66,7 @@ This document outlines the standards and best practices for developing augmented
 ## Performance Optimization
 
 ### Graphics Optimization
+
 1. **Rendering Efficiency**:
    - Polygon count guidelines for different devices
    - Level of detail (LOD) implementation requirements
@@ -74,6 +80,7 @@ This document outlines the standards and best practices for developing augmented
    - Asset streaming guidelines
 
 ### Performance Targets
+
 - **Frame Rate Requirements**: Minimum frame rate standards for different experiences
 - **Latency Guidelines**: Maximum acceptable motion-to-photon latency
 - **Battery Considerations**: Power optimization for mobile and standalone devices
@@ -82,12 +89,14 @@ This document outlines the standards and best practices for developing augmented
 ## Development Practices
 
 ### Project Structure
+
 - Organization standards for Unity/Unreal projects
 - Asset naming conventions
 - Scene hierarchy organization patterns
 - Prefab/Blueprint composition guidelines
 
 ### Testing Methodology
+
 1. **User Testing**:
    - VR sickness and comfort evaluation protocols
    - User ergonomics assessment guidelines
@@ -99,6 +108,7 @@ This document outlines the standards and best practices for developing augmented
    - Environmental testing (different lighting conditions, spaces)
 
 ### Iteration and Prototyping
+
 - Rapid prototyping methodologies for spatial experiences
 - User feedback collection standards
 - Iteration cycles for comfort and usability
@@ -107,18 +117,21 @@ This document outlines the standards and best practices for developing augmented
 ## Platform-Specific Considerations
 
 ### Mobile AR
+
 - ARKit optimization guidelines
 - ARCore performance standards
 - Multi-user AR session management
 - Persistent AR content requirements
 
 ### VR
+
 - Room-scale setup guidelines
 - Seated/standing experience standards
 - Hand presence implementation patterns
 - Virtual body representation (avatars) requirements
 
 ### Mixed Reality
+
 - World anchoring best practices
 - Real-world occlusion handling
 - Environment mapping standards
@@ -127,6 +140,7 @@ This document outlines the standards and best practices for developing augmented
 ## Technical Considerations
 
 ### Tracking and Recognition
+
 1. **Spatial Tracking**:
    - SLAM implementation guidelines
    - Marker-based tracking standards
@@ -140,12 +154,14 @@ This document outlines the standards and best practices for developing augmented
    - Fallback patterns for tracking loss
 
 ### Multi-user and Networking
+
 - Avatar representation standards
 - Networked physics synchronization
 - Latency compensation techniques
 - Shared anchor systems requirements
 
 ### Integration with Other Systems
+
 - Guidelines for backend service integration
 - AR cloud services standards
 - AI/ML integration for XR applications
@@ -154,12 +170,14 @@ This document outlines the standards and best practices for developing augmented
 ## Accessibility
 
 ### Inclusive Design
+
 - Vision impairment accommodation guidelines
 - Mobility consideration standards
 - Cognitive accessibility requirements
 - Customizable experience recommendations
 
 ### Safety and Comfort
+
 - Anti-harassment features requirements
 - Personal space preservation guidelines
 - Content warning standards
@@ -168,12 +186,14 @@ This document outlines the standards and best practices for developing augmented
 ## Documentation
 
 ### Technical Documentation
+
 - Scene setup documentation requirements
 - Interaction model documentation
 - Performance characteristics documentation
 - Device compatibility documentation
 
 ### User Documentation
+
 - User onboarding guidelines
 - Interaction tutorial standards
 - Health and safety warning requirements
@@ -182,19 +202,22 @@ This document outlines the standards and best practices for developing augmented
 ## Quality Assurance
 
 ### QA Process
+
 - XR-specific testing methodologies
 - Simulation tools for different environments
 - User experience evaluation frameworks
 - Performance benchmarking requirements
 
 ### Release Criteria
+
 - Minimum frame rate requirements
 - Maximum acceptable latency
 - Device compatibility requirements
 - Comfort rating system
 
 ## References
+
 - [Oculus VR Best Practices](https://developer.oculus.com/learn/bp-vision/)
 - [Google AR Design Guidelines](https://designguidelines.withgoogle.com/ar-design/)
 - [Apple Human Interface Guidelines for AR](https://developer.apple.com/design/human-interface-guidelines/augmented-reality)
-- [Microsoft Mixed Reality Design](https://docs.microsoft.com/en-us/windows/mixed-reality/design/) 
+- [Microsoft Mixed Reality Design](https://docs.microsoft.com/en-us/windows/mixed-reality/design/)
