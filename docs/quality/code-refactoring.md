@@ -1,3 +1,12 @@
+<!--
+Document: Code Refactoring Guidelines
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Code Refactoring Guidelines
 
 This document provides structured guidance on when and how to approach code refactoring at Bayat. Following these guidelines ensures that refactoring efforts are strategic, effective, and aligned with business goals.

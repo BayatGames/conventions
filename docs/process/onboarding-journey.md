@@ -1,3 +1,12 @@
+<!--
+Document: Onboarding Journey Maps
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Onboarding Journey Maps
 
 This document defines standards for creating and maintaining developer onboarding journey maps at Bayat.

@@ -1,3 +1,12 @@
+<!--
+Document: Multi-Repository Management Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Multi-Repository Management Standards
 
 This document outlines standards and best practices for managing multiple repositories across Bayat projects. It provides guidelines for ensuring consistency, facilitating collaboration, and maintaining efficiency when working with a distributed codebase.

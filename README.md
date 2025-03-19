@@ -291,8 +291,8 @@ To ensure documentation consistency and completeness:
 
 When creating new documentation files:
 
-1. Use the document version header template from [Document Version Header](docs/templates/document-version-header.md)
-2. Follow the section organization guide in [Section Organization](docs/templates/section-organization.md)
+1. Use the document version header template from [Document Version Header](templates/document-version-header.md)
+2. Follow the section organization guide in [Section Organization](templates/section-organization.md)
 3. Keep documentation up to date, with correct version information
 
 ## Contributing to Conventions

@@ -1,3 +1,12 @@
+<!--
+Document: Compliance Automation Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Compliance Automation Standards
 
 This document outlines standards and best practices for automating compliance checks and security validations throughout the development lifecycle at Bayat. Following these standards ensures consistent, reliable, and efficient compliance management.

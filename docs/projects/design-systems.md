@@ -1,3 +1,12 @@
+<!--
+Document: Design Systems and UI/UX Guidelines
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Design Systems and UI/UX Guidelines
 
 This document outlines the standards and best practices for creating, maintaining, and implementing design systems across Bayat projects, ensuring consistent user experiences and efficient development workflows.

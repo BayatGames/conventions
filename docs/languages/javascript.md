@@ -1,3 +1,12 @@
+<!--
+Document: JavaScript Coding Conventions
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # JavaScript Coding Conventions
 
 This document outlines the JavaScript coding conventions and standards for all Bayat projects. Following these guidelines ensures code consistency, readability, and maintainability across all JavaScript codebases.

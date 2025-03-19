@@ -1,3 +1,12 @@
+<!--
+Document: C# Coding Conventions
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # C# Coding Conventions
 
 This document outlines the C# coding conventions and standards for all Bayat projects. Following these guidelines ensures code consistency, readability, and maintainability across all projects.

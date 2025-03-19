@@ -1,3 +1,12 @@
+<!--
+Document: API Documentation Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # API Documentation Standards
 
 This document outlines the standards and best practices for creating and maintaining API documentation across all Bayat projects. Following these guidelines ensures that APIs are well-documented, accessible, and usable by developers.

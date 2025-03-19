@@ -1,3 +1,12 @@
+<!--
+Document: Emerging Technologies Guidelines
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Emerging Technologies Guidelines
 
 This document outlines the standards and best practices for developing applications using emerging technologies at Bayat, including Artificial Intelligence/Machine Learning (AI/ML), Augmented Reality/Virtual Reality (AR/VR), Internet of Things (IoT), and Edge Computing.

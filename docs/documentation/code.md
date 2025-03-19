@@ -1,3 +1,12 @@
+<!--
+Document: Code Documentation Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Code Documentation Standards
 
 This document outlines the standards and best practices for documenting code across all Bayat projects. Following these guidelines ensures that code is well-documented, maintainable, and understandable by all team members.

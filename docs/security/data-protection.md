@@ -1,3 +1,12 @@
+<!--
+Document: Data Protection Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Data Protection Standards
 
 This document outlines Bayat's standards and best practices for protecting data throughout its lifecycle across all projects and systems.

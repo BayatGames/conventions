@@ -1,3 +1,12 @@
+<!--
+Document: API Versioning and Deprecation Strategy
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # API Versioning and Deprecation Strategy
 
 This document outlines the formal process for API lifecycle management at Bayat, providing guidelines for versioning, maintaining, and deprecating APIs in a way that balances innovation with stability for consumers.

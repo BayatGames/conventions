@@ -1,3 +1,12 @@
+<!--
+Document: DevSecOps Practices
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # DevSecOps Practices
 
 This document outlines the DevSecOps practices and standards at Bayat, integrating security throughout the software development lifecycle.

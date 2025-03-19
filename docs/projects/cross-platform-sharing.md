@@ -1,3 +1,12 @@
+<!--
+Document: Cross-Platform Code Sharing Strategies
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Cross-Platform Code Sharing Strategies
 
 This document outlines the standards, patterns, and best practices for sharing code across web, mobile, and desktop platforms at Bayat.

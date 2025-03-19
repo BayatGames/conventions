@@ -1,3 +1,12 @@
+<!--
+Document: Python Coding Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Python Coding Standards
 
 This document outlines the coding standards and best practices for Python development across all Bayat projects. Following these guidelines ensures code consistency, quality, and maintainability.

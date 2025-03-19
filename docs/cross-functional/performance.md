@@ -1,3 +1,12 @@
+<!--
+Document: Performance Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Performance Standards
 
 This document outlines the performance standards and optimization guidelines that all Bayat projects must adhere to.

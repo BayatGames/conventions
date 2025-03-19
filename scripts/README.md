@@ -56,6 +56,45 @@ Summary:
 ❌ Validation failed. Please update README.md to fix the issues listed above.
 ```
 
+### `check_links.sh`
+
+Checks for broken links in documentation files.
+
+**Usage:**
+
+```bash
+./check_links.sh
+```
+
+### `add_document_headers.sh`
+
+Adds standard document headers to markdown files that don't have them already.
+
+**Usage:**
+
+```bash
+./add_document_headers.sh
+```
+
+**What it does:**
+
+1. Finds all markdown files in the docs directory
+2. Checks if each file already has a header (starting with `<!--`)
+3. If no header exists, extracts the document title from the first H1 header or filename
+4. Adds a standardized header with title, version, last updated date, and change log
+5. Provides a summary of files processed and headers added
+
+**Example output:**
+
+```
+Adding document headers to markdown files...
+Added header to ./docs/architecture/backend.md
+Header already exists in ./docs/architecture/mlops.md
+Added header to ./docs/security/authentication.md
+...
+Added headers to 135 files.
+```
+
 ## Adding New Scripts
 
 When adding new scripts, please follow these guidelines:

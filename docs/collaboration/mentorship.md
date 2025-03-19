@@ -1,3 +1,12 @@
+<!--
+Document: Mentorship and Knowledge Sharing
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Mentorship and Knowledge Sharing
 
 This document outlines the structured approach to internal knowledge transfer and technical mentorship at Bayat. Following these guidelines ensures effective skill development, knowledge retention, and a collaborative learning culture.

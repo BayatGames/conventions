@@ -1,3 +1,12 @@
+<!--
+Document: Native Multi-Platform Application Development
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Native Multi-Platform Application Development
 
 This document outlines standards and best practices for developing applications natively across multiple platforms (iOS/Android for mobile, Windows/macOS/Linux for desktop) without using cross-platform frameworks.

@@ -1,3 +1,12 @@
+<!--
+Document: Learning Resources
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Learning Resources
 
 This document provides a curated list of learning resources for various technologies, methodologies, and best practices used across Bayat projects.

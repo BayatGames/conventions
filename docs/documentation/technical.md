@@ -1,3 +1,12 @@
+<!--
+Document: Technical Documentation Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Technical Documentation Standards
 
 This document outlines the standards and best practices for creating technical documentation across all Bayat projects. Technical documentation includes architecture documents, design specifications, technical guides, and other documentation aimed at developers and technical stakeholders.

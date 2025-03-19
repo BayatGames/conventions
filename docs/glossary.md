@@ -1,3 +1,12 @@
+<!--
+Document: Glossary of Terms
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Glossary of Terms
 
 This document provides definitions for common terms and acronyms used throughout Bayat Development Conventions and projects.

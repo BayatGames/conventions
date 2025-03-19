@@ -1,3 +1,12 @@
+<!--
+Document: AI Governance Policies
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # AI Governance Policies
 
 This document outlines comprehensive governance policies for responsible AI development, deployment, and maintenance across Bayat projects. Following these standards ensures that AI systems are developed ethically, transparently, and in alignment with organizational values and regulatory requirements.

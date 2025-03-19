@@ -1,3 +1,12 @@
+<!--
+Document: Unity Development Conventions
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Unity Development Conventions
 
 This document outlines the standards and best practices for Unity development at Bayat. These guidelines ensure consistency, quality, and maintainability across all Unity projects.

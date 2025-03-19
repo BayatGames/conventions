@@ -1,3 +1,12 @@
+<!--
+Document: Git Repositories Conventions
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Git Repositories Conventions
 
 This document outlines Bayat's repository conventions, guidelines, and standards. It provides a comprehensive framework for repository management that integrates with the \1\2) and \1\2) to ensure consistency across all project types.

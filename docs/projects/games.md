@@ -1,3 +1,12 @@
+<!--
+Document: Game Development Standards
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Game Development Standards
 
 This document outlines Bayat's standards and best practices for game development projects. It provides guidelines for game architecture, design patterns, and project organization to ensure consistency and quality across all game projects.

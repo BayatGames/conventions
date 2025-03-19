@@ -1,3 +1,12 @@
+<!--
+Document: Community Contribution Guidelines
+Version: 1.0.0
+Last Updated: 2025-03-20
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-03-20: Initial version
+-->
+
 # Community Contribution Guidelines
 
 This document outlines the standards and best practices for external contributions to Bayat's open-source projects.
