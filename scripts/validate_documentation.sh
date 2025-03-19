@@ -26,8 +26,8 @@ MISSING_FILES=0
 
 echo -e "\nChecking for unreferenced markdown files..."
 for FILE in $MARKDOWN_FILES; do
-    # Get relative path from the repository root
-    RELATIVE_PATH=$(realpath --relative-to="$REPO_ROOT" "$FILE")
+    # Get relative path from the repository root using Python (works on macOS and Linux)
+    RELATIVE_PATH=$(python3 -c "import os.path; print(os.path.relpath('$FILE', '$REPO_ROOT'))")
     
     # Skip README.md itself
     if [ "$RELATIVE_PATH" = "README.md" ] || [ "$RELATIVE_PATH" = "./README.md" ]; then
