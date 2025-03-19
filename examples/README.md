@@ -9,17 +9,17 @@ Change Log:
 
 # Example Implementations
 
-This directory contains links to reference implementation repositories that demonstrate Bayat's development conventions in action.
+This directory contains reference implementations that demonstrate Bayat's development conventions in action.
 
 ## Available Examples
 
 | Example | Description | Tech Stack | Conventions Demonstrated |
 |---------|-------------|------------|--------------------------|
-| [Bayat API Starter](https://github.com/bayat/examples/api-starter) | Production-ready API starter kit | Node.js, Express, TypeScript | API design, testing, documentation |
-| [Bayat React Frontend](https://github.com/bayat/examples/react-frontend) | Frontend application template | React, TypeScript, Redux | Component structure, state management, accessibility |
-| [Bayat Full-Stack App](https://github.com/bayat/examples/full-stack) | Complete full-stack application | React, Node.js, PostgreSQL | End-to-end architecture, deployment, CI/CD |
-| [Bayat Microservices Demo](https://github.com/bayat/examples/microservices) | Microservices architecture demo | Node.js, Go, Kubernetes | Microservices, containerization, API gateway |
-| [Bayat ML Pipeline](https://github.com/bayat/examples/ml-pipeline) | Machine learning pipeline | Python, TensorFlow, MLflow | MLOps, data engineering, model deployment |
+| [Bayat API Starter](api-starter/README.md) | Production-ready API starter kit | Node.js, Express, TypeScript | API design, testing, documentation |
+| [Bayat React Frontend](react-frontend/README.md) | Frontend application template | React, TypeScript, Redux | Component structure, state management, accessibility |
+| [Bayat Full-Stack App](full-stack/README.md) | Complete full-stack application | React, Node.js, PostgreSQL | End-to-end architecture, deployment, CI/CD |
+| [Bayat Microservices Demo](microservices/README.md) | Microservices architecture demo | Node.js, Go, Kubernetes | Microservices, containerization, API gateway |
+| [Bayat ML Pipeline](ml-pipeline/README.md) | Machine learning pipeline | Python, TensorFlow, MLflow | MLOps, data engineering, model deployment |
 
 ## Using These Examples
 
@@ -34,7 +34,7 @@ These example repositories are designed to be used as:
 If you'd like to contribute a new example implementation:
 
 1. Follow the [Contribution Guidelines](../CONTRIBUTING.md)
-2. Use the [Project Template](docs/templates/starter-kits.md) guidelines
+2. Use the [Project Template](../docs/templates/starter-kits.md) guidelines
 3. Ensure your example demonstrates multiple conventions
 4. Include thorough documentation and testing
 
