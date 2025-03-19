@@ -18,6 +18,7 @@ The purpose of these conventions is to:
 - **Contributing**: Read our [Contribution Guidelines](CONTRIBUTING.md)
 - **Recent Changes**: View our [Changelog](CHANGELOG.md)
 - **Self-Assessment**: Use our [Compliance Checklist](docs/quality/compliance-checklist.md)
+- **Example Implementations**: See [Example Repositories](examples/README.md)
 
 ## Structure
 
@@ -101,6 +102,7 @@ Documentation standards:
 - [End-User Documentation](docs/documentation/end-user-documentation.md) - Guidelines for creating user-facing documentation
 - [Technical Writing](docs/documentation/technical-writing.md) - Standards for technical writing
 - [Developer Portal](docs/documentation/developer-portal.md) - Standards for developer portal content and structure
+- [Interactive Documentation](docs/documentation/interactive-documentation.md) - Recommendations for implementing interactive documentation solutions
 
 ### DevOps
 
@@ -166,6 +168,7 @@ Architecture standards:
 - [Quantum Computing](docs/architecture/quantum-computing.md) - Quantum computing readiness guidelines
 - [Low-Code/No-Code](docs/architecture/low-code-no-code.md) - Low-code/no-code integration guidelines
 - [Architecture Decision Records](docs/architecture/architecture-decision-records.md) - Standards for documenting architectural decisions
+- [Architecture Diagrams](docs/architecture/architecture-diagrams.md) - Standards and templates for creating architecture diagrams
 - [Platform Engineering](docs/architecture/platform-engineering.md) - Platform engineering standards
 - [GraphQL Standards](docs/architecture/graphql-standards.md) - Standards for GraphQL API development
 - [Event-Driven Architecture](docs/architecture/event-driven-architecture.md) - Detailed event-driven architecture standards

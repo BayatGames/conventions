@@ -33,8 +33,8 @@ These example repositories are designed to be used as:
 
 If you'd like to contribute a new example implementation:
 
-1. Follow the [Contribution Guidelines](../../CONTRIBUTING.md)
-2. Use the [Project Template](../templates/starter-kits.md) guidelines
+1. Follow the [Contribution Guidelines](../CONTRIBUTING.md)
+2. Use the [Project Template](docs/templates/starter-kits.md) guidelines
 3. Ensure your example demonstrates multiple conventions
 4. Include thorough documentation and testing
 

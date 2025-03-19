@@ -69,12 +69,12 @@ for link in extract_links_outside_code_blocks("'"$FILE"'"):
                     continue
                 fi
                 
-                # Check if the link points to an existing file
+                # Check if the link points to an existing file or directory
                 # Try relative to the current file's directory first
                 FILE_DIR=$(dirname "$FILE")
-                if [ -f "$FILE_DIR/$BASE_LINK" ]; then
+                if [ -f "$FILE_DIR/$BASE_LINK" ] || [ -d "$FILE_DIR/$BASE_LINK" ]; then
                     continue
-                elif [ -f "$REPO_ROOT/$BASE_LINK" ]; then
+                elif [ -f "$REPO_ROOT/$BASE_LINK" ] || [ -d "$REPO_ROOT/$BASE_LINK" ]; then
                     continue
                 else
                     echo "  Broken link: $LINK in $RELATIVE_PATH"
