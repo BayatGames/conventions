@@ -66,8 +66,11 @@ Standards for development processes and team workflows:
 - [Documentation Standards](docs/process/documentation-standards.md) - Guidelines for creating and maintaining documentation
 - [Onboarding Journey](docs/process/onboarding-journey.md) - Structured approach to developer onboarding
 - [Code Review Automation](docs/process/code-review-automation.md) - Standards for automating code review processes
+- [Developer Experience](docs/process/developer-experience.md) - Guidelines for improving developer experience
+- [Developer Experience Metrics](docs/process/developer-experience-metrics.md) - Standards for measuring developer experience
 - [Developer Experience Optimization](docs/process/developer-experience-optimization.md) - Standards for improving developer workflows and productivity
 - [Knowledge Management Protocol](docs/process/knowledge-management-protocol.md) - Standards for documentation maintenance and knowledge sharing
+- [Innovation Framework](docs/process/innovation-framework.md) - Guidelines for innovation processes and experimentation
 
 ### Quality Assurance
 
@@ -99,6 +102,7 @@ DevOps practices and standards:
 - [Deployment](docs/devops/deployment.md) - Deployment processes and environments
 - [Infrastructure as Code](docs/devops/infrastructure.md) - IaC standards and patterns
 - [Monitoring](docs/devops/monitoring.md) - Application and system monitoring standards
+- [Observability](docs/devops/observability.md) - Observability and telemetry guidelines
 - [Performance Monitoring](docs/devops/performance-monitoring-standards.md) - Standards for application performance monitoring
 - [Containerization](docs/devops/containers.md) - Docker and container best practices
 - [Disaster Recovery](docs/devops/disaster-recovery.md) - Disaster recovery and business continuity standards
@@ -287,8 +291,8 @@ To ensure documentation consistency and completeness:
 
 When creating new documentation files:
 
-1. Use the document version header template from `docs/templates/document-version-header.md`
-2. Follow the section organization guide in `docs/templates/section-organization.md`
+1. Use the document version header template from [Document Version Header](docs/templates/document-version-header.md)
+2. Follow the section organization guide in [Section Organization](docs/templates/section-organization.md)
 3. Keep documentation up to date, with correct version information
 
 ## Contributing to Conventions
