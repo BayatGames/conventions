@@ -24,6 +24,13 @@ echo "Found $REFERENCED_FILES referenced files in README.md"
 UNREFERENCED_FILES=0
 MISSING_FILES=0
 
+# Files to ignore during validation (not requiring reference in main README)
+# Add any files that should be ignored here
+IGNORED_FILES=(
+    "scripts/README.md"    # README for scripts directory, viewed directly on GitHub
+    # Add more files to ignore if needed
+)
+
 echo -e "\nChecking for unreferenced markdown files..."
 for FILE in $MARKDOWN_FILES; do
     # Get relative path from the repository root using Python (works on macOS and Linux)
@@ -31,6 +38,19 @@ for FILE in $MARKDOWN_FILES; do
     
     # Skip README.md itself
     if [ "$RELATIVE_PATH" = "README.md" ] || [ "$RELATIVE_PATH" = "./README.md" ]; then
+        continue
+    fi
+    
+    # Skip ignored files
+    SKIP=false
+    for IGNORED_FILE in "${IGNORED_FILES[@]}"; do
+        if [ "$RELATIVE_PATH" = "$IGNORED_FILE" ]; then
+            SKIP=true
+            break
+        fi
+    done
+    
+    if [ "$SKIP" = true ]; then
         continue
     fi
     

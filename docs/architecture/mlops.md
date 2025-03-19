@@ -1,10 +1,10 @@
 <!--
 Document: Machine Learning Operations (MLOps) Standards
 Version: 1.0.0
-Last Updated: 2023-03-19
+Last Updated: 2025-03-20
 Last Updated By: Bayat Platform Team
 Change Log:
-- 2023-03-19: Initial version
+- 2025-03-19: Initial version
 -->
 
 # Machine Learning Operations (MLOps) Standards

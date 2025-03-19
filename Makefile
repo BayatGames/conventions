@@ -20,12 +20,13 @@ validate:
 # Check for broken links in documentation
 check-links:
 	@echo "Checking for broken links in documentation..."
-	@find . -name "*.md" -type f -exec grep -l "\[.*\](" {} \; | xargs -I{} sh -c 'echo "Checking {}..."; grep -o "\[.*\]([^)]*)" {} | grep -v "http" | sed "s/.*(\(.*\))/\1/" | while read link; do [ -f "$${link}" ] || echo "  Broken link: $${link}"; done'
+	@chmod +x scripts/check_links.sh
+	@./scripts/check_links.sh
 
 # Update version headers in documentation files
 update-versions:
 	@echo "Updating version headers in documentation files..."
-	@find . -name "*.md" -type f -not -path "./.git/*" -exec sed -i '' -E '1,/^---$$/{s/^(Last Updated:) .*/\1 $(shell date +%Y-%m-%d)/g}' {} \;
+	@find . -name "*.md" -type f -not -path "./.git/*" -exec sed -i '' -E '1,/^---$$/s/^(Last Updated:) .*/\1 $(shell date +%Y-%m-%d)/g' {} \;
 
 # Run all validation checks
 check-all: validate check-links
