@@ -1,0 +1,73 @@
+@startuml Microservices Architecture
+
+skinparam {
+  defaultTextAlignment center
+  shadowing false
+  ArrowColor #2C3E50
+  ComponentStyle uml2
+  linetype ortho
+}
+
+!define RECTANGLE class
+
+' Components
+RECTANGLE "Client Application" as client #B3E5FC
+RECTANGLE "API Gateway\n(Kong)" as gateway #FFCCBC
+RECTANGLE "User Service" as user_service #DCEDC8
+RECTANGLE "Product Service" as product_service #F0F4C3
+RECTANGLE "Order Service" as order_service #F8BBD0
+RECTANGLE "Notification Service" as notification_service #D1C4E9
+RECTANGLE "MongoDB" as mongodb #FFECB3
+RECTANGLE "Kafka" as kafka #F5F5F5
+
+' Connections
+client -down-> gateway : HTTP/REST
+gateway -down-> user_service : HTTP/REST
+gateway -down-> product_service : HTTP/REST
+gateway -down-> order_service : HTTP/REST
+
+user_service -right-> kafka : Publish Events
+product_service -right-> kafka : Publish Events
+order_service -right-> kafka : Publish Events
+kafka -right-> notification_service : Consume Events
+
+user_service -down-> mongodb : User Data
+product_service -down-> mongodb : Product Data
+order_service -down-> mongodb : Order Data
+notification_service -down-> mongodb : Notification Data
+
+' Notes
+note right of kafka
+  - USER_CREATED
+  - USER_UPDATED
+  - USER_DELETED
+  - PRODUCT_CREATED
+  - PRODUCT_UPDATED
+  - PRODUCT_DELETED
+  - INVENTORY_UPDATED
+  - ORDER_CREATED
+  - ORDER_UPDATED
+  - ORDER_SHIPPED
+  - ORDER_DELIVERED
+  - ORDER_CANCELLED
+end note
+
+note right of notification_service
+  - Email (Nodemailer)
+  - SMS (Twilio)
+  - Push (Future)
+end note
+
+note left of mongodb
+  Each service has 
+  its own database
+end note
+
+note bottom of gateway
+  - Routing
+  - Authentication
+  - Rate Limiting
+  - CORS
+end note
+
+@enduml 

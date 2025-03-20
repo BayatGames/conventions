@@ -74,6 +74,43 @@ services:
           credentials: true
           max_age: 3600
 
+  # Product Service
+  - name: product-service
+    url: http://product-service:3004
+    routes:
+      - name: product-routes
+        paths:
+          - /api/products
+        strip_path: false
+    plugins:
+      - name: rate-limiting
+        config:
+          second: 5
+          hour: 10000
+      - name: jwt
+        config:
+          secret_is_base64: false
+          claims_to_verify:
+            - exp
+      - name: cors
+        config:
+          origins:
+            - '*'
+          methods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - OPTIONS
+            - PATCH
+          headers:
+            - Authorization
+            - Content-Type
+          exposed_headers:
+            - X-Auth-Token
+          credentials: true
+          max_age: 3600
+
   # Notification Service
   - name: notification-service
     url: http://notification-service:3002

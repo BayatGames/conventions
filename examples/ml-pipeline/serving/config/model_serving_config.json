@@ -1,0 +1,49 @@
+{
+  "model_registry": "./model_registry",
+  "mlflow_tracking_uri": "sqlite:///mlruns.db",
+  "feature_transformer_path": "../features/transformers/saved_transformers/feature_transformer.pkl",
+  "default_model": "iris_classifier",
+  "models": {
+    "iris_classifier": {
+      "type": "mlflow",
+      "run_id": "example_run_id_for_iris",
+      "description": "Random forest classifier for iris species prediction",
+      "version": "1.0.0",
+      "features": ["sepal_length", "sepal_width", "petal_length", "petal_width"],
+      "metrics": {
+        "accuracy": 0.95,
+        "f1_score": 0.94
+      }
+    },
+    "housing_regressor": {
+      "type": "pickle",
+      "path": "./model_registry/housing_regressor.pkl",
+      "description": "Gradient boosting regressor for house price prediction",
+      "version": "1.0.0",
+      "features": ["rooms", "bedrooms", "bathrooms", "area", "age", "lot_size"],
+      "metrics": {
+        "rmse": 23450.5,
+        "r2": 0.87
+      }
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "log_predictions": true,
+    "log_dir": "./logs"
+  },
+  "monitoring": {
+    "enable_prometheus": true,
+    "prometheus_port": 8000,
+    "alert_threshold": {
+      "latency_ms": 500,
+      "error_rate": 0.05
+    }
+  },
+  "api": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "max_workers": 4,
+    "request_timeout": 30
+  }
+} 

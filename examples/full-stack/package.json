@@ -21,12 +21,17 @@
   "author": "Bayat Platform Team",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^8.2.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.0.0"
+    "concurrently": "^8.2.2",
+    "husky": "^9.0.6",
+    "lint-staged": "^15.2.0"
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
+  },
+  "overrides": {
+    "rimraf": "^5.0.5",
+    "glob": "^10.3.10",
+    "superagent": "^9.0.0"
   }
 } 

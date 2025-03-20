@@ -13,18 +13,21 @@ services:
       - KONG_PROXY_ERROR_LOG=/dev/stderr
       - KONG_ADMIN_ERROR_LOG=/dev/stderr
       - KONG_ADMIN_LISTEN=0.0.0.0:8001
-      - KONG_ADMIN_GUI_URL=http://localhost:8002
     ports:
       - "8000:8000"  # Proxy
       - "8001:8001"  # Admin API
       - "8443:8443"  # Proxy SSL
-      - "8444:8444"  # Admin API SSL
     volumes:
       - ./api-gateway/kong.yml:/usr/local/kong/declarative/kong.yml
     networks:
       - microservices-net
+    healthcheck:
+      test: ["CMD", "kong", "health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-  # User Service (Node.js)
+  # User Service
   user-service:
     build:
       context: ./user-service
@@ -32,39 +35,94 @@ services:
     container_name: user-service
     environment:
       - NODE_ENV=development
-      - PORT=3000
-      - DB_CONNECTION=mongodb://mongo:27017/users
+      - PORT=3001
+      - MONGODB_URI=mongodb://mongodb:27017/user-service
+      - JWT_SECRET=your_jwt_secret_key_here
+      - JWT_EXPIRATION=1d
       - KAFKA_BROKERS=kafka:9092
+      - KAFKA_CLIENT_ID=user-service
+      - KAFKA_GROUP_ID=user-service-group
+      - LOG_LEVEL=info
+      - CORS_ORIGIN=*
     ports:
-      - "3000:3000"
+      - "3001:3001"
     depends_on:
-      - mongo
+      - mongodb
       - kafka
-    volumes:
-      - ./user-service:/app
-      - /app/node_modules
     networks:
       - microservices-net
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-  # Order Service (Go)
+  # Order Service
   order-service:
     build:
       context: ./order-service
       dockerfile: Dockerfile
     container_name: order-service
     environment:
-      - PORT=3001
-      - DB_CONNECTION=postgresql://postgres:postgres@postgres:5432/orders
+      - NODE_ENV=development
+      - PORT=3002
+      - MONGODB_URI=mongodb://mongodb:27017/order-service
+      - JWT_SECRET=your_jwt_secret_key_here
       - KAFKA_BROKERS=kafka:9092
+      - KAFKA_CLIENT_ID=order-service
+      - KAFKA_GROUP_ID=order-service-group
+      - USER_SERVICE_URL=http://user-service:3001
+      - LOG_LEVEL=info
+      - CORS_ORIGIN=*
     ports:
-      - "3001:3001"
+      - "3002:3002"
     depends_on:
-      - postgres
+      - mongodb
       - kafka
+      - user-service
     networks:
       - microservices-net
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-  # Notification Service (Node.js)
+  # Product Service
+  product-service:
+    build:
+      context: ./product-service
+      dockerfile: Dockerfile
+    container_name: product-service
+    environment:
+      - NODE_ENV=development
+      - PORT=3004
+      - MONGODB_URI=mongodb://mongodb:27017/product-service
+      - JWT_SECRET=your_jwt_secret_key_here
+      - KAFKA_BROKERS=kafka:9092
+      - KAFKA_CLIENT_ID=product-service
+      - KAFKA_GROUP_ID=product-service-group
+      - UPLOAD_DIR=/app/uploads
+      - MAX_FILE_SIZE=5000000
+      - LOG_LEVEL=info
+      - CORS_ORIGIN=*
+    ports:
+      - "3004:3004"
+    volumes:
+      - product_uploads:/app/uploads
+    depends_on:
+      - mongodb
+      - kafka
+      - user-service
+    networks:
+      - microservices-net
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3004/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Notification Service
   notification-service:
     build:
       context: ./notification-service
@@ -72,62 +130,82 @@ services:
     container_name: notification-service
     environment:
       - NODE_ENV=development
-      - PORT=3002
-      - REDIS_URL=redis://redis:6379
+      - PORT=3003
+      - MONGODB_URI=mongodb://mongodb:27017/notification-service
       - KAFKA_BROKERS=kafka:9092
+      - KAFKA_CLIENT_ID=notification-service
+      - KAFKA_GROUP_ID=notification-service-group
+      - EMAIL_HOST=smtp.example.com
+      - EMAIL_PORT=587
+      - EMAIL_USER=your_email@example.com
+      - EMAIL_PASSWORD=your_email_password
+      - EMAIL_FROM=no-reply@example.com
+      - TWILIO_ACCOUNT_SID=your_twilio_account_sid
+      - TWILIO_AUTH_TOKEN=your_twilio_auth_token
+      - TWILIO_PHONE_NUMBER=your_twilio_phone_number
+      - LOG_LEVEL=info
+      - CORS_ORIGIN=*
     ports:
-      - "3002:3002"
+      - "3003:3003"
     depends_on:
-      - redis
+      - mongodb
       - kafka
-    volumes:
-      - ./notification-service:/app
-      - /app/node_modules
     networks:
       - microservices-net
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-  # Databases
-  mongo:
+  # MongoDB
+  mongodb:
     image: mongo:latest
-    container_name: mongo
+    container_name: mongodb
     ports:
       - "27017:27017"
     volumes:
-      - mongo-data:/data/db
+      - mongodb_data:/data/db
     networks:
       - microservices-net
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-  postgres:
-    image: postgres:latest
-    container_name: postgres
+  # MongoDB Express (Web-based MongoDB admin interface)
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=orders
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_PORT=27017
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=password
     ports:
-      - "5432:5432"
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - "8081:8081"
+    depends_on:
+      - mongodb
     networks:
       - microservices-net
 
-  # Cache and messaging
-  redis:
-    image: redis:latest
-    container_name: redis
-    ports:
-      - "6379:6379"
-    networks:
-      - microservices-net
-
-  # Kafka for event streaming
+  # Kafka and Zookeeper
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
     environment:
       - ZOOKEEPER_CLIENT_PORT=2181
+      - ZOOKEEPER_TICK_TIME=2000
+    ports:
+      - "2181:2181"
     networks:
       - microservices-net
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "2181"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   kafka:
     image: confluentinc/cp-kafka:latest
@@ -139,44 +217,29 @@ services:
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
       - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
     ports:
       - "9092:9092"
     networks:
       - microservices-net
+    healthcheck:
+      test: ["CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-  # Monitoring and tracing
-  prometheus:
-    image: prom/prometheus:latest
-    container_name: prometheus
+  # Kafka UI
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=local
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+      - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper:2181
     ports:
-      - "9090:9090"
-    volumes:
-      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
-    networks:
-      - microservices-net
-
-  grafana:
-    image: grafana/grafana:latest
-    container_name: grafana
-    ports:
-      - "3030:3000"
+      - "8080:8080"
     depends_on:
-      - prometheus
-    volumes:
-      - grafana-data:/var/lib/grafana
-    networks:
-      - microservices-net
-
-  jaeger:
-    image: jaegertracing/all-in-one:latest
-    container_name: jaeger
-    ports:
-      - "5775:5775/udp"
-      - "6831:6831/udp"
-      - "6832:6832/udp"
-      - "5778:5778"
-      - "16686:16686"  # UI
-      - "14268:14268"
+      - kafka
     networks:
       - microservices-net
 
@@ -185,6 +248,5 @@ networks:
     driver: bridge
 
 volumes:
-  mongo-data:
-  postgres-data:
-  grafana-data: 
+  mongodb_data:
+  product_uploads: 

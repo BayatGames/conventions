@@ -65,6 +65,17 @@ npm install
 npm run dev
 ```
 
+## Dependency Management
+
+This project uses npm workspaces to manage dependencies across multiple packages. We maintain current dependencies to avoid using deprecated packages. Key aspects:
+
+- All workspaces use modern, non-deprecated package versions
+- The root `package.json` includes overrides for common transitive dependencies
+- E2E testing is implemented with Playwright
+- A postinstall script handles deprecated packages like `rimraf`
+
+If you encounter deprecation warnings when installing, check the root `package.json` to see if overrides need to be updated.
+
 ## Project Structure
 
 ```plaintext
@@ -72,7 +83,7 @@ full-stack/
 ├── client/             # Frontend React application
 ├── server/             # Backend Express API
 ├── shared/             # Shared types and utilities
-├── e2e/                # End-to-end tests
+├── e2e/                # End-to-end tests with Playwright
 ├── .github/            # GitHub Actions workflows
 ├── docker-compose.yml  # Development environment setup
 └── README.md           # This file
@@ -80,12 +91,12 @@ full-stack/
 
 ## Conventions Demonstrated
 
-- [API Design](../../docs/api-design.md)
-- [Frontend Architecture](../../docs/frontend-architecture.md)
-- [Backend Architecture](../../docs/backend-architecture.md)
-- [Testing Strategy](../../docs/testing.md)
-- [CI/CD Pipeline](../../docs/cicd.md)
-- [Deployment](../../docs/deployment.md)
+- [API Design](../../docs/architecture/api-design.md)
+- [Frontend Architecture](../../docs/architecture/frontend.md)
+- [Backend Architecture](../../docs/architecture/backend.md)
+- [Testing Strategy](../../docs/quality/testing.md)
+- [CI/CD Pipeline](../../docs/quality/ci-cd.md)
+- [Deployment](../../docs/devops/deployment.md)
 
 ## Learning from this Example
 

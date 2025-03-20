@@ -19,6 +19,7 @@ This project demonstrates a modern microservices architecture with multiple serv
 
 - **API Gateway (Kong)**: Routes client requests to appropriate services
 - **User Service**: Manages user accounts and authentication
+- **Product Service**: Manages product catalog and inventory
 - **Order Service**: Handles order creation and management
 - **Notification Service**: Sends notifications via email, SMS, etc.
 - **Kafka**: Message broker for event-driven communication between services
@@ -39,6 +40,21 @@ Responsible for user management, authentication, and authorization.
   - `USER_CREATED`: When a new user is registered
   - `USER_UPDATED`: When a user profile is updated
   - `USER_DELETED`: When a user is deleted
+
+### Product Service
+
+Manages the product catalog and inventory.
+
+- **Endpoints**:
+  - Create, read, update, delete products
+  - Product search and filtering
+  - Inventory management
+
+- **Events Published**:
+  - `PRODUCT_CREATED`: When a new product is added
+  - `PRODUCT_UPDATED`: When a product is updated
+  - `PRODUCT_DELETED`: When a product is removed
+  - `INVENTORY_UPDATED`: When product inventory changes
 
 ### Order Service
 
@@ -101,6 +117,7 @@ docker-compose up
 4. Access the services:
    - API Gateway: http://localhost:8000
    - User Service: http://localhost:3001
+   - Product Service: http://localhost:3004
    - Order Service: http://localhost:3002
    - Notification Service: http://localhost:3003
    - Kafka UI: http://localhost:8080
@@ -111,6 +128,7 @@ docker-compose up
 Each service provides Swagger documentation available at `/api-docs` endpoint.
 
 - User Service API Docs: http://localhost:3001/api-docs
+- Product Service API Docs: http://localhost:3004/api-docs
 - Order Service API Docs: http://localhost:3002/api-docs
 - Notification Service API Docs: http://localhost:3003/api-docs
 
@@ -170,6 +188,7 @@ npm test
 microservices/
 ├── api-gateway/         # Kong gateway configuration
 ├── user-service/        # Node.js service for user management
+├── product-service/     # Node.js service for product management
 ├── order-service/       # Go service for order processing
 ├── notification-service/ # Node.js service for notifications
 ├── shared/              # Shared libraries and types

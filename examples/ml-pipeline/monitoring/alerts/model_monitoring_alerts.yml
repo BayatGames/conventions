@@ -1,0 +1,155 @@
+groups:
+- name: model_monitoring_alerts
+  rules:
+  
+  # Model Performance Alerts
+  - alert: ModelAccuracyBelowThreshold
+    expr: model_accuracy < 0.8
+    for: 30m
+    labels:
+      severity: warning
+      category: model_performance
+    annotations:
+      summary: "Model Accuracy Below Threshold"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has accuracy below 0.8: {{ $value }}"
+      runbook_url: "https://docs.example.com/ml/model-accuracy-issues"
+  
+  - alert: ModelAccuracySeverelyLow
+    expr: model_accuracy < 0.6
+    for: 15m
+    labels:
+      severity: critical
+      category: model_performance
+    annotations:
+      summary: "Model Accuracy Severely Low"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has critically low accuracy: {{ $value }}"
+      runbook_url: "https://docs.example.com/ml/model-accuracy-issues"
+  
+  # Prediction Error Alerts
+  - alert: HighErrorRate
+    expr: sum(increase(model_prediction_errors_total[5m])) / sum(increase(model_predictions_total[5m])) > 0.05
+    for: 10m
+    labels:
+      severity: warning
+      category: model_errors
+    annotations:
+      summary: "High Model Error Rate"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has high error rate of {{ $value | humanizePercentage }} in the last 5 minutes"
+      runbook_url: "https://docs.example.com/ml/error-rate-issues"
+  
+  - alert: CriticalErrorRate
+    expr: sum(increase(model_prediction_errors_total[5m])) / sum(increase(model_predictions_total[5m])) > 0.1
+    for: 5m
+    labels:
+      severity: critical
+      category: model_errors
+    annotations:
+      summary: "Critical Model Error Rate"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has critical error rate of {{ $value | humanizePercentage }} in the last 5 minutes"
+      runbook_url: "https://docs.example.com/ml/error-rate-issues"
+
+  # Latency Alerts
+  - alert: SlowPredictions
+    expr: histogram_quantile(0.95, sum(rate(model_prediction_latency_seconds_bucket[5m])) by (le, model_name, model_version)) > 0.1
+    for: 10m
+    labels:
+      severity: warning
+      category: model_performance
+    annotations:
+      summary: "Slow Prediction Latency"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has p95 latency of {{ $value | humanizeDuration }} which exceeds threshold of 100ms"
+      runbook_url: "https://docs.example.com/ml/latency-issues"
+  
+  - alert: CriticalPredictionLatency
+    expr: histogram_quantile(0.95, sum(rate(model_prediction_latency_seconds_bucket[5m])) by (le, model_name, model_version)) > 0.5
+    for: 5m
+    labels:
+      severity: critical
+      category: model_performance
+    annotations:
+      summary: "Critical Prediction Latency"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has p95 latency of {{ $value | humanizeDuration }} which exceeds critical threshold of 500ms"
+      runbook_url: "https://docs.example.com/ml/latency-issues"
+  
+  # Data Drift Alerts
+  - alert: FeatureDriftDetected
+    expr: model_feature_drift > 0.05
+    for: 15m
+    labels:
+      severity: warning
+      category: data_drift
+    annotations:
+      summary: "Feature Drift Detected"
+      description: "Feature {{ $labels.feature_name }} in model {{ $labels.model_name }} v{{ $labels.model_version }} has drift score of {{ $value | humanizePercentage }}"
+      runbook_url: "https://docs.example.com/ml/drift-detection"
+  
+  - alert: SevereDriftDetected
+    expr: model_feature_drift > 0.2
+    for: 5m
+    labels:
+      severity: critical
+      category: data_drift
+    annotations:
+      summary: "Severe Feature Drift Detected"
+      description: "Feature {{ $labels.feature_name }} in model {{ $labels.model_name }} v{{ $labels.model_version }} has severe drift score of {{ $value | humanizePercentage }}"
+      runbook_url: "https://docs.example.com/ml/drift-detection"
+  
+  # Prediction Distribution Drift
+  - alert: PredictionDriftDetected
+    expr: model_prediction_drift > 0.05
+    for: 15m
+    labels:
+      severity: warning
+      category: data_drift
+    annotations:
+      summary: "Prediction Drift Detected"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} predictions show drift score of {{ $value | humanizePercentage }}"
+      runbook_url: "https://docs.example.com/ml/prediction-drift"
+
+  # Anomaly Detection
+  - alert: AnomaliesDetected
+    expr: model_anomaly_score > 0.7
+    for: 10m
+    labels:
+      severity: warning
+      category: anomalies
+    annotations:
+      summary: "Anomalies Detected in Model Data"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has anomaly score of {{ $value | humanizePercentage }}"
+      runbook_url: "https://docs.example.com/ml/anomaly-detection"
+
+  # Throughput Alerts
+  - alert: LowPredictionThroughput
+    expr: sum(rate(model_predictions_total[5m])) by (model_name, model_version) < 10
+    for: 15m
+    labels:
+      severity: warning
+      category: usage
+    annotations:
+      summary: "Low Prediction Throughput"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has low throughput: {{ $value | humanizePercentage }} predictions/s"
+      runbook_url: "https://docs.example.com/ml/throughput-issues"
+
+  # Zero Traffic Alert
+  - alert: NoPredictionTraffic
+    expr: sum(rate(model_predictions_total[10m])) by (model_name, model_version) == 0
+    for: 10m
+    labels:
+      severity: critical
+      category: usage
+    annotations:
+      summary: "No Prediction Traffic"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} has received no prediction requests in the last 10 minutes"
+      runbook_url: "https://docs.example.com/ml/traffic-issues"
+
+  # Retraining Recommendation
+  - alert: ModelRetrainingRecommended
+    expr: (model_feature_drift > 0.1 or model_prediction_drift > 0.1) and (model_accuracy < 0.85)
+    for: 1h
+    labels:
+      severity: warning
+      category: retraining
+    annotations:
+      summary: "Model Retraining Recommended"
+      description: "Model {{ $labels.model_name }} v{{ $labels.model_version }} shows signs of drift and performance degradation. Retraining is recommended."
+      runbook_url: "https://docs.example.com/ml/retraining-procedure" 
