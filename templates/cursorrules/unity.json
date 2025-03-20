@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "rules": [
+    {
+      "name": "Commit Message Standards",
+      "description": "Rules for commit messages following conventional commits specification",
+      "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
+      "file_patterns": [".git/COMMIT_EDITMSG"],
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+    },
+    {
+      "name": "C# Coding Standards",
+      "description": "C# naming conventions, structure, and best practices for Unity",
+      "file_patterns": ["*.cs"],
+      "documentation": ".cursor/mdc/csharp_standards.md"
+    },
+    {
+      "name": "Unity Scripting",
+      "description": "Unity-specific scripting patterns and optimization techniques",
+      "file_patterns": ["*.cs", "*.asmdef"],
+      "documentation": ".cursor/mdc/unity_scripting.md"
+    },
+    {
+      "name": "Asset Management",
+      "description": "Project organization, asset handling, and folder structure",
+      "file_patterns": ["**/Assets/**/*"],
+      "documentation": ".cursor/mdc/asset_management.md"
+    },
+    {
+      "name": "Performance Guidelines",
+      "description": "Performance optimization tips for Unity development",
+      "file_patterns": ["*.cs", "*.shader", "*.compute"],
+      "documentation": ".cursor/mdc/performance_guidelines.md"
+    },
+    {
+      "name": "MonoBehaviour Scripts",
+      "description": "Unity MonoBehaviour script structure and lifecycle methods",
+      "file_patterns": ["**/Scripts/**/*.cs"],
+      "documentation": ".cursor/mdc/unity_scripting.md"
+    },
+    {
+      "name": "Editor Scripts",
+      "description": "Unity Editor extension conventions and best practices",
+      "file_patterns": ["**/Editor/**/*.cs"],
+      "documentation": ".cursor/mdc/unity_scripting.md"
+    },
+    {
+      "name": "Shader Standards",
+      "description": "Unity shader development standards and practices",
+      "file_patterns": ["*.shader", "*.compute", "*.hlsl", "*.cginc"],
+      "documentation": ".cursor/mdc/performance_guidelines.md"
+    },
+    {
+      "name": "Inspector Serialization",
+      "description": "Guidance for properly exposing fields in the Unity Inspector",
+      "file_patterns": ["*.cs"],
+      "documentation": ".cursor/mdc/csharp_standards.md"
+    },
+    {
+      "name": "Unity Project Settings",
+      "description": "Best practices for Unity project configuration",
+      "file_patterns": ["**/ProjectSettings/**/*"],
+      "documentation": ".cursor/mdc/asset_management.md"
+    }
+  ]
+} 

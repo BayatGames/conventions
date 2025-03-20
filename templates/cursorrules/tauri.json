@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "rules": [
+    {
+      "name": "Commit Message Standards",
+      "description": "Rules for commit messages following conventional commits specification",
+      "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
+      "file_patterns": [".git/COMMIT_EDITMSG"],
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+    },
+    {
+      "name": "Tauri Best Practices",
+      "description": "Core Tauri patterns and security best practices",
+      "file_patterns": ["src-tauri/**/*.rs", "src-tauri/tauri.conf.json"],
+      "documentation": ".cursor/mdc/tauri_best_practices.md"
+    },
+    {
+      "name": "Rust Standards",
+      "description": "Rust coding conventions and patterns for Tauri backend",
+      "file_patterns": ["**/*.rs"],
+      "documentation": ".cursor/mdc/rust_standards.md"
+    },
+    {
+      "name": "Frontend Integration",
+      "description": "Guidelines for connecting frontend framework with Tauri",
+      "file_patterns": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue"],
+      "documentation": ".cursor/mdc/frontend_integration.md"
+    },
+    {
+      "name": "Project Architecture",
+      "description": "Project structure, organization, and file layout",
+      "file_patterns": ["src-tauri/**/*", "src/**/*", "**/*.json", "**/*.toml"],
+      "documentation": ".cursor/mdc/project_architecture.md"
+    },
+    {
+      "name": "Tauri Security",
+      "description": "Security best practices for Tauri applications",
+      "file_patterns": ["src-tauri/tauri.conf.json", "src/**/*.rs", "src-tauri/**/*.rs"],
+      "documentation": ".cursor/mdc/tauri_best_practices.md"
+    },
+    {
+      "name": "Tauri Commands",
+      "description": "Guidelines for implementing Tauri commands",
+      "file_patterns": ["src/**/commands/**/*.rs"],
+      "documentation": ".cursor/mdc/rust_standards.md"
+    },
+    {
+      "name": "Tauri Events",
+      "description": "Standards for using Tauri events system",
+      "file_patterns": ["src/**/*.rs", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue"],
+      "documentation": ".cursor/mdc/frontend_integration.md"
+    },
+    {
+      "name": "Configuration Management",
+      "description": "Guidelines for managing Tauri application configuration",
+      "file_patterns": ["src-tauri/tauri.conf.json", "**/*.env*", "src/config/*.ts", "src/config/*.js"],
+      "documentation": ".cursor/mdc/project_architecture.md"
+    },
+    {
+      "name": "Error Handling",
+      "description": "Error handling patterns for Tauri applications",
+      "file_patterns": ["**/*.rs", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue"],
+      "documentation": ".cursor/mdc/rust_standards.md"
+    }
+  ]
+} 

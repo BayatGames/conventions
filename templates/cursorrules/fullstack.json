@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "rules": [
+    {
+      "name": "Commit Message Standards",
+      "description": "Rules for commit messages following conventional commits specification",
+      "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
+      "file_patterns": [".git/COMMIT_EDITMSG"],
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+    },
+    {
+      "name": "TypeScript Standards",
+      "description": "TypeScript coding standards and best practices",
+      "file_patterns": ["*.ts", "*.tsx"],
+      "documentation": ".cursor/mdc/typescript.md"
+    },
+    {
+      "name": "JavaScript Standards",
+      "description": "JavaScript coding standards and best practices",
+      "file_patterns": ["*.js", "*.jsx"],
+      "documentation": ".cursor/mdc/javascript.md"
+    },
+    {
+      "name": "React Standards",
+      "description": "React development patterns and best practices",
+      "file_patterns": ["client/**/*.jsx", "client/**/*.tsx"],
+      "documentation": ".cursor/mdc/react.md"
+    },
+    {
+      "name": "Frontend Component Structure",
+      "description": "Frontend component organization and structure",
+      "file_patterns": ["client/**/components/**/*.tsx", "client/**/components/**/*.jsx"],
+      "documentation": ".cursor/mdc/component_structure.md"
+    },
+    {
+      "name": "Backend Architecture",
+      "description": "Backend architecture and organization",
+      "file_patterns": ["server/**/*.js", "server/**/*.ts"],
+      "documentation": ".cursor/mdc/backend_architecture.md"
+    },
+    {
+      "name": "API Design",
+      "description": "API design standards and best practices",
+      "file_patterns": ["server/**/routes/**/*.js", "server/**/routes/**/*.ts", "server/**/controllers/**/*.js", "server/**/controllers/**/*.ts"],
+      "documentation": ".cursor/mdc/api_design.md"
+    },
+    {
+      "name": "Database Standards",
+      "description": "Database interaction best practices",
+      "file_patterns": ["server/**/models/**/*.js", "server/**/models/**/*.ts", "server/**/db/**/*.js", "server/**/db/**/*.ts"],
+      "documentation": ".cursor/mdc/database.md"
+    },
+    {
+      "name": "Frontend Testing",
+      "description": "Frontend testing best practices",
+      "file_patterns": ["client/**/*.test.js", "client/**/*.test.ts", "client/**/*.spec.js", "client/**/*.spec.ts"],
+      "documentation": ".cursor/mdc/frontend_testing.md"
+    },
+    {
+      "name": "Backend Testing",
+      "description": "Backend testing best practices",
+      "file_patterns": ["server/**/*.test.js", "server/**/*.test.ts", "server/**/*.spec.js", "server/**/*.spec.ts"],
+      "documentation": ".cursor/mdc/backend_testing.md"
+    },
+    {
+      "name": "Project Structure",
+      "description": "Full-stack project organization",
+      "file_patterns": ["**/package.json", "**/tsconfig.json"],
+      "documentation": ".cursor/mdc/project_structure.md"
+    }
+  ]
+} 

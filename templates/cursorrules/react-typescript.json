@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "rules": [
+    {
+      "name": "Commit Message Standards",
+      "description": "Rules for commit messages following conventional commits specification",
+      "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
+      "file_patterns": [".git/COMMIT_EDITMSG"],
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+    },
+    {
+      "name": "TypeScript Standards",
+      "description": "TypeScript coding standards and best practices",
+      "file_patterns": ["*.ts", "*.tsx"],
+      "documentation": ".cursor/mdc/typescript.md"
+    },
+    {
+      "name": "React Standards",
+      "description": "React development patterns and best practices",
+      "file_patterns": ["*.jsx", "*.tsx"],
+      "documentation": ".cursor/mdc/react.md"
+    },
+    {
+      "name": "Component Structure",
+      "description": "Component organization and structure standards",
+      "file_patterns": ["**/components/**/*.tsx", "**/components/**/*.jsx"],
+      "documentation": ".cursor/mdc/component_structure.md"
+    },
+    {
+      "name": "State Management",
+      "description": "State management patterns and best practices",
+      "file_patterns": ["**/store/**/*.ts", "**/context/**/*.ts", "**/hooks/use*.ts"],
+      "documentation": ".cursor/mdc/state_management.md"
+    },
+    {
+      "name": "Test Standards",
+      "description": "React testing best practices",
+      "file_patterns": ["**/*.test.tsx", "**/*.test.ts", "**/*.spec.tsx", "**/*.spec.ts"],
+      "documentation": ".cursor/mdc/testing.md"
+    },
+    {
+      "name": "Styling Standards",
+      "description": "CSS and styling best practices",
+      "file_patterns": ["*.css", "*.scss", "*.module.css", "*.module.scss", "**/styles/*.ts"],
+      "documentation": ".cursor/mdc/styling.md"
+    }
+  ]
+} 

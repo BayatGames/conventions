@@ -1,0 +1,63 @@
+// Bayat Development Conventions Cursor Rules
+// These rules define context awareness for intelligent code editing in Cursor
+{
+  "version": "1.0",
+  "rules": [
+    {
+      "name": "Commit Message Standards",
+      "description": "Rules for commit messages following conventional commits specification",
+      "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
+      "file_patterns": [".git/COMMIT_EDITMSG"],
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+    },
+    {
+      "name": "TypeScript Standards",
+      "description": "TypeScript coding standards and best practices",
+      "file_patterns": ["*.ts", "*.tsx"],
+      "documentation": "docs/languages/typescript.md"
+    },
+    {
+      "name": "JavaScript Standards",
+      "description": "JavaScript coding standards and best practices",
+      "file_patterns": ["*.js", "*.jsx"],
+      "documentation": "docs/languages/javascript.md"
+    },
+    {
+      "name": "React Standards",
+      "description": "React development patterns and best practices",
+      "file_patterns": ["*.jsx", "*.tsx"],
+      "documentation": "docs/frameworks/react.md"
+    },
+    {
+      "name": "Git Flow",
+      "description": "Branch naming and workflow standards",
+      "file_patterns": [".git/HEAD"],
+      "pattern": "refs/heads/(main|master|develop|feature/|bugfix/|hotfix/|release/)",
+      "documentation": "docs/git/flow.md"
+    },
+    {
+      "name": "API Design",
+      "description": "API design standards and best practices",
+      "file_patterns": ["**/api/**/*.js", "**/api/**/*.ts", "**/controllers/**/*.js", "**/controllers/**/*.ts"],
+      "documentation": "docs/architecture/api-design.md"
+    },
+    {
+      "name": "Test Coverage",
+      "description": "Testing standards and requirements",
+      "file_patterns": ["**/*.test.js", "**/*.test.ts", "**/*.spec.js", "**/*.spec.ts"],
+      "documentation": "docs/quality/testing.md"
+    },
+    {
+      "name": "Documentation Standards",
+      "description": "Documentation requirements and formatting",
+      "file_patterns": ["**/*.md", "**/*.mdx"],
+      "documentation": "docs/documentation/technical.md"
+    },
+    {
+      "name": "Code Generation",
+      "description": "Guidelines for AI-assisted code generation",
+      "file_patterns": ["**/*.generated.ts", "**/*.generated.js"],
+      "documentation": "docs/quality/code-generation.md"
+    }
+  ]
+} 

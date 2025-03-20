@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "rules": [
+    {
+      "name": "Commit Message Standards",
+      "description": "Rules for commit messages following conventional commits specification",
+      "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
+      "file_patterns": [".git/COMMIT_EDITMSG"],
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+    },
+    {
+      "name": "NodeJS Standards",
+      "description": "Node.js coding standards and best practices",
+      "file_patterns": ["*.js", "*.ts"],
+      "documentation": ".cursor/mdc/nodejs.md"
+    },
+    {
+      "name": "API Design",
+      "description": "API design standards and best practices",
+      "file_patterns": ["**/routes/**/*.js", "**/routes/**/*.ts", "**/controllers/**/*.js", "**/controllers/**/*.ts"],
+      "documentation": ".cursor/mdc/api_design.md"
+    },
+    {
+      "name": "Database Access",
+      "description": "Database interaction best practices",
+      "file_patterns": ["**/models/**/*.js", "**/models/**/*.ts", "**/repositories/**/*.js", "**/repositories/**/*.ts"],
+      "documentation": ".cursor/mdc/database.md"
+    },
+    {
+      "name": "Authentication",
+      "description": "Authentication and security best practices",
+      "file_patterns": ["**/auth/**/*.js", "**/auth/**/*.ts", "**/middleware/auth*.js", "**/middleware/auth*.ts"],
+      "documentation": ".cursor/mdc/authentication.md"
+    },
+    {
+      "name": "Error Handling",
+      "description": "Error handling patterns and standards",
+      "file_patterns": ["**/errors/**/*.js", "**/errors/**/*.ts", "**/middleware/error*.js", "**/middleware/error*.ts"],
+      "documentation": ".cursor/mdc/error_handling.md"
+    },
+    {
+      "name": "Testing Standards",
+      "description": "Backend testing best practices",
+      "file_patterns": ["**/*.test.js", "**/*.test.ts", "**/*.spec.js", "**/*.spec.ts"],
+      "documentation": ".cursor/mdc/backend_testing.md"
+    }
+  ]
+} 
