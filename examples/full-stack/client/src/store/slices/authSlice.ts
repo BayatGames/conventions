@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { LoginCredentials, RegisterCredentials, User } from 'shared/types';
+import { LoginCredentials, RegisterCredentials, User } from 'shared';
 import { api } from '../../api';
 
 interface AuthState {

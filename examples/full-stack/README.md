@@ -65,6 +65,34 @@ npm install
 npm run dev
 ```
 
+## Docker Setup
+
+This project includes a Docker Compose configuration for development:
+
+```bash
+# Start all services with Docker Compose
+docker-compose up
+
+# Or in detached mode
+docker-compose up -d
+
+# To rebuild containers after making changes to Dockerfiles
+docker-compose up --build
+
+# To stop all services
+docker-compose down
+
+# To stop all services and remove volumes
+docker-compose down -v
+```
+
+The Docker setup includes:
+- Client service on port 3000
+- Server service on port 4000
+- PostgreSQL database on port 5432
+
+All services are configured to work together out of the box. The database connection string in the server's environment is set to connect to the Docker database service.
+
 ## Dependency Management
 
 This project uses npm workspaces to manage dependencies across multiple packages. We maintain current dependencies to avoid using deprecated packages. Key aspects:
@@ -81,7 +109,9 @@ If you encounter deprecation warnings when installing, check the root `package.j
 ```plaintext
 full-stack/
 ├── client/             # Frontend React application
+│   └── Dockerfile.dev  # Development Docker configuration for client
 ├── server/             # Backend Express API
+│   └── Dockerfile.dev  # Development Docker configuration for server
 ├── shared/             # Shared types and utilities
 ├── e2e/                # End-to-end tests with Playwright
 ├── .github/            # GitHub Actions workflows
