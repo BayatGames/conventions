@@ -54,6 +54,19 @@ Scripts/
 - Group related assets with prefixes
 - Use suffixes to identify asset types
 
+### Package Identifier Conventions
+
+For Unity packages and assets published by Bayat, follow these conventions:
+
+- Unity packages: `io.bayat.unity.{category}` (e.g., `io.bayat.unity.ui`, `io.bayat.unity.tools`)
+- Game packages: `io.bayat.games.{gamename}` (e.g., `io.bayat.games.twins`)
+- Asset store packages: `Bayat.{Category}` (e.g., `Bayat.UI`, `Bayat.Core`)
+
+Project settings should reflect these naming conventions in:
+- Package manifest (package.json)
+- Assembly definition files (.asmdef)
+- Product name and bundle identifier in Player Settings
+
 ### Asset Type Suffixes
 
 - **Animations**: `_Anim` or `_Animation`

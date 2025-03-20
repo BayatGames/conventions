@@ -19,6 +19,7 @@ The purpose of these conventions is to:
 - **Recent Changes**: View our [Changelog](CHANGELOG.md)
 - **Self-Assessment**: Use our [Compliance Checklist](docs/quality/compliance-checklist.md)
 - **Example Implementations**: See [Example Repositories](examples/README.md)
+- **Cursor Integration**: Use our [Cursor IDE Templates](templates/README.md) for Unity, Tauri, React, Node.js, and full-stack projects
 
 ## Structure
 
@@ -172,6 +173,7 @@ Architecture standards:
 - [Platform Engineering](docs/architecture/platform-engineering.md) - Platform engineering standards
 - [GraphQL Standards](docs/architecture/graphql-standards.md) - Standards for GraphQL API development
 - [Event-Driven Architecture](docs/architecture/event-driven-architecture.md) - Detailed event-driven architecture standards
+- [Naming Conventions](docs/general/naming.md) - Standardized naming conventions for namespaces and package identifiers across all Bayat projects
 
 ### Project-Specific Standards
 

@@ -11,15 +11,23 @@ This document outlines best practices for Unity-specific scripting according to 
 - **Interface Implementation**: Use interfaces to define behavior contracts between components
 
   ```csharp
-  public interface IDamageable
+  // Define interface in appropriate namespace
+  namespace Bayat.Games.Core
   {
-      void TakeDamage(float amount);
-      bool IsInvulnerable { get; }
+      public interface IDamageable
+      {
+          void TakeDamage(float amount);
+          bool IsInvulnerable { get; }
+      }
   }
   
-  public class Player : MonoBehaviour, IDamageable
+  // Implement interface in game-specific namespace
+  namespace Bayat.Games.Twins
   {
-      // Interface implementation
+      public class Player : MonoBehaviour, IDamageable
+      {
+          // Interface implementation
+      }
   }
   ```
 
@@ -28,14 +36,18 @@ This document outlines best practices for Unity-specific scripting according to 
 - Use **dependency injection** where appropriate:
 
   ```csharp
-  [RequireComponent(typeof(Rigidbody))]
-  public class PlayerMovement : MonoBehaviour
+  // In appropriate Bayat namespace
+  namespace Bayat.Games.Twins.Player
   {
-      private Rigidbody rb;
-      
-      private void Awake()
+      [RequireComponent(typeof(Rigidbody))]
+      public class PlayerMovement : MonoBehaviour
       {
-          rb = GetComponent<Rigidbody>();
+          private Rigidbody rb;
+          
+          private void Awake()
+          {
+              rb = GetComponent<Rigidbody>();
+          }
       }
   }
   ```

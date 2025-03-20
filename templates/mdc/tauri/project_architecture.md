@@ -9,15 +9,15 @@ This document outlines best practices for structuring Tauri applications accordi
 A well-organized Tauri project should follow this structure:
 
 ```plaintext
-my-tauri-app/
-├── src/                  # Rust backend code
-├── src-tauri/            # Tauri configuration and bridge
-├── src-frontend/         # Frontend code (React, Vue, etc.)
-├── .github/              # CI/CD workflows
-├── scripts/              # Build and utility scripts
-├── .gitignore            # Git ignore patterns
-├── README.md             # Project documentation
-└── package.json          # Project metadata and scripts
+my-tauri-app/                # Should follow Bayat naming convention (e.g., bayat-taskmanager)
+├── src/                     # Rust backend code
+├── src-tauri/               # Tauri configuration and bridge
+├── src-frontend/            # Frontend code (React, Vue, etc.)
+├── .github/                 # CI/CD workflows
+├── scripts/                 # Build and utility scripts
+├── .gitignore               # Git ignore patterns
+├── README.md                # Project documentation
+└── package.json             # Project metadata and scripts (should use io.bayat.apps.{appname})
 ```
 
 ### Rust Backend Structure (src/)
@@ -52,8 +52,8 @@ The Tauri-specific configuration should be organized as:
 
 ```plaintext
 src-tauri/
-├── Cargo.toml            # Rust dependencies
-├── tauri.conf.json       # Tauri configuration
+├── Cargo.toml            # Rust dependencies (should use bayat-{category} crate naming)
+├── tauri.conf.json       # Tauri configuration (should use io.bayat.apps.{appname} identifier)
 ├── build.rs              # Build script
 ├── icons/                # Application icons
 └── Tauri.toml            # Tauri-specific metadata

@@ -61,6 +61,12 @@
       "description": "Error handling patterns for Tauri applications",
       "file_patterns": ["**/*.rs", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue"],
       "documentation": ".cursor/mdc/rust_standards.md"
+    },
+    {
+      "name": "Bayat Naming Conventions",
+      "description": "Bayat-specific naming conventions for packages, namespaces, and identifiers",
+      "file_patterns": ["Cargo.toml", "package.json", "src-tauri/tauri.conf.json", "**/*.rs"],
+      "documentation": ".cursor/mdc/rust_standards.md"
     }
   ]
 } 

@@ -36,6 +36,29 @@ This document outlines the Rust coding standards for Tauri development according
   - `profile_updated`
   - `connection_established`
 
+### Package Identifiers
+
+For Tauri applications and packages, follow these identifier conventions:
+
+- Application bundles: `io.bayat.apps.{appname}` (e.g., `io.bayat.apps.taskmanager`)
+- Tauri plugins: `io.bayat.tauri.{plugin}` (e.g., `io.bayat.tauri.storage`)
+- Rust crates: `bayat-{category}` (e.g., `bayat-core`, `bayat-utils`)
+
+### Module Namespaces
+
+For Rust modules, follow these namespace conventions:
+
+```rust
+// Main application namespace
+bayat::apps::{appname}
+
+// Library namespace
+bayat::{category}
+
+// Specific tool/plugin namespace
+bayat::tools::{toolname}
+```
+
 ## Code Structure
 
 ### Module Organization

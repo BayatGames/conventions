@@ -72,17 +72,51 @@ This document outlines the C# coding standards for Unity development according t
 
 ### Namespaces
 
-Always wrap your code in namespaces to avoid conflicts:
+Always wrap your code in namespaces to avoid conflicts. Bayat follows a strict hierarchical namespace convention:
 
 ```csharp
-namespace Bayat.Game.Core
+// For games
+namespace Bayat.Games.GameName
 {
     public class PlayerController : MonoBehaviour
     {
         // Class implementation
     }
 }
+
+// For libraries or packages
+namespace Bayat.Games.UI
+{
+    public class Button : MonoBehaviour
+    {
+        // Class implementation
+    }
+}
+
+// For core libraries
+namespace Bayat.Core
+{
+    public class Logger
+    {
+        // Class implementation
+    }
+}
 ```
+
+Namespace guidelines:
+- Games must be under the `Bayat.Games` namespace
+- Game-specific code should be under `Bayat.Games.{GameName}` (e.g., `Bayat.Games.Twins`)
+- Libraries for games should be under `Bayat.Games.{Category}` (e.g., `Bayat.Games.UI`)
+- Core libraries are under `Bayat.{Category}` (e.g., `Bayat.Core`)
+
+Adding the "Game" suffix to game namespaces (e.g., `Bayat.Games.TwinsGame`) is optional based on project requirements.
+
+### Package Identifiers
+
+For Unity packages and games, follow these package identifier conventions:
+
+- Unity packages: `io.bayat.unity.{category}` (e.g., `io.bayat.unity.ui`)
+- Game bundles: `io.bayat.games.{gamename}` (e.g., `io.bayat.games.twins`)
 
 ## Best Practices
 

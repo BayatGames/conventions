@@ -61,6 +61,12 @@
       "description": "Best practices for Unity project configuration",
       "file_patterns": ["**/ProjectSettings/**/*"],
       "documentation": ".cursor/mdc/asset_management.md"
+    },
+    {
+      "name": "Naming Conventions",
+      "description": "Bayat-specific naming conventions for namespaces and package identifiers",
+      "file_patterns": ["*.cs", "*.asmdef", "package.json", "**/ProjectSettings/ProjectSettings.asset"],
+      "documentation": ".cursor/mdc/csharp_standards.md"
     }
   ]
 } 
