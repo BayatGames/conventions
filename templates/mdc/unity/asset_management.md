@@ -38,6 +38,8 @@ Each major folder should be organized by feature or module:
 
 ```plaintext
 Scripts/
+├── Editor/             # Editor-specific scripts
+└── Runtime/            # Runtime scripts (further breakdown below)
 ├── Core/               # Core systems and managers
 ├── Player/             # Player-related scripts
 ├── Enemies/            # Enemy-related scripts
@@ -86,6 +88,13 @@ Project settings should reflect these naming conventions in:
 - `Explosion_SFX`
 
 ## Asset Management Practices
+
+### Special Folders
+
+- **Editor**: Scripts in this folder are compiled for the Editor only (not included in builds).
+- **Resources**: Assets can be loaded via `Resources.Load()`. Avoid heavy use.
+- **StreamingAssets**: Assets are copied as-is to the build (no processing).
+- **Plugins**: Contains native plugins.
 
 ### Texture Guidelines
 

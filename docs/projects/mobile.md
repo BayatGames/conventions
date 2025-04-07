@@ -9,29 +9,13 @@ Change Log:
 
 # Mobile Application Development Standards
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Architecture](#architecture)
-3. [Platform-Specific Guidelines](#platform-specific-guidelines)
-4. [UI/UX Design](#uiux-design)
-5. [Performance Optimization](#performance-optimization)
-6. [Security](#security)
-7. [Data Management](#data-management)
-8. [Networking](#networking)
-9. [Testing](#testing)
-10. [Deployment](#deployment)
-11. [Monitoring and Analytics](#monitoring-and-analytics)
-12. [Accessibility](#accessibility)
-13. [Internationalization](#internationalization)
-14. [Offline Support](#offline-support)
-15. [Notifications](#notifications)
-16. [Version Control](#version-control)
-17. [Documentation](#documentation)
-18. [Project Management](#project-management)
+This document outlines specific standards and considerations for mobile application development at Bayat, complementing the core conventions.
 
-## Introduction
+## Core Technologies
 
-This document outlines the standard conventions and best practices for mobile application development at Bayat. These guidelines aim to ensure consistency, maintainability, and scalability across all mobile projects, including iOS, Android, and cross-platform applications.
+- **Cross-Platform Frameworks**: Refer to [Flutter Conventions](docs/frameworks/flutter.md) and [React Native Conventions](docs/frameworks/react-native.md) (if applicable).
+- **Native Development**: Refer to [Swift Standards](docs/languages/swift.md) and [Kotlin Standards](docs/languages/kotlin.md).
+- **Backend**: Follow standards relevant to the backend stack ([Node.js](docs/frameworks/nodejs.md), [Python](docs/languages/python.md), etc.).
 
 ## Architecture
 
@@ -53,7 +37,7 @@ This document outlines the standard conventions and best practices for mobile ap
 
 ### Project Structure
 
-```
+```plaintext
 project-root/
 ├── src/                      # Source code
 │   ├── api/                  # API and networking
@@ -683,4 +667,4 @@ val itemsText = resources.getQuantityString(R.plurals.items_count, itemCount, it
 - Document decisions and rationales
 - Conduct regular team meetings
 - Use asynchronous communication when appropriate
-- Maintain up-to-date documentation 
+- Maintain up-to-date documentation

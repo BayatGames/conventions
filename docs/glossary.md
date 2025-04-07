@@ -23,6 +23,8 @@ This document provides definitions for common terms and acronyms used throughout
 
 **Authorization**: The process of determining whether a user has permission to access a resource or perform an action.
 
+**ADR (Architecture Decision Record)**: A document that captures an important architectural decision made along with its context and consequences.
+
 **AWS (Amazon Web Services)**: A cloud computing platform provided by Amazon.
 
 ## B
@@ -41,6 +43,8 @@ This document provides definitions for common terms and acronyms used throughout
 
 **CI/CD (Continuous Integration/Continuous Deployment)**: Development practices that involve frequently integrating code changes and automatically deploying them to production.
 
+**C4 Model**: A lean graphical notation technique for modelling the architecture of software systems at different levels of abstraction (Context, Containers, Components, Code).
+
 **CLI (Command Line Interface)**: A text-based interface used to interact with software and operating systems.
 
 **Cloud Computing**: The delivery of computing services over the internet, including servers, storage, databases, networking, and software.
@@ -50,6 +54,10 @@ This document provides definitions for common terms and acronyms used throughout
 **CORS (Cross-Origin Resource Sharing)**: A security feature that allows or restricts web applications running at one origin to request resources from a different origin.
 
 **CRUD**: Create, Read, Update, Delete - the four basic operations of persistent storage.
+
+**Conventional Commits**: A specification for adding human and machine-readable meaning to commit messages.
+
+**DevSecOps**: An extension of DevOps that integrates security practices throughout the software development lifecycle.
 
 ## D
 
@@ -88,6 +96,8 @@ This document provides definitions for common terms and acronyms used throughout
 ## G
 
 **Git**: A distributed version control system for tracking changes in source code during software development.
+
+**Git LFS (Large File Storage)**: A Git extension for versioning large files.
 
 **GraphQL**: A query language for APIs and a runtime for executing those queries against your data.
 
@@ -145,6 +155,10 @@ This document provides definitions for common terms and acronyms used throughout
 
 **MVC (Model-View-Controller)**: A software design pattern commonly used for developing user interfaces.
 
+**Mermaid**: A JavaScript-based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.
+
+**Monorepo**: A version control repository that holds the source code for multiple projects or components.
+
 ## N
 
 **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
@@ -173,6 +187,8 @@ This document provides definitions for common terms and acronyms used throughout
 
 **PWA (Progressive Web App)**: A type of application built using web technologies but that delivers an app-like experience.
 
+**PlantUML**: An open-source tool allowing users to create UML diagrams from a plain text language.
+
 ## Q
 
 **QA (Quality Assurance)**: A systematic process of checking to see whether a product or service being developed meets specified requirements.
@@ -180,6 +196,8 @@ This document provides definitions for common terms and acronyms used throughout
 **Query**: A request for data or information from a database.
 
 ## R
+
+**RAII (Resource Acquisition Is Initialization)**: A C++ programming technique where resource use is tied to object lifetime through constructors and destructors.
 
 **Race Condition**: A behavior that occurs when two or more threads can access shared data and try to change it at the same time.
 
@@ -212,6 +230,10 @@ This document provides definitions for common terms and acronyms used throughout
 **SSR (Server-Side Rendering)**: The process of rendering web pages on the server and sending fully rendered pages to the client.
 
 **Swagger**: A tool for documenting RESTful APIs.
+
+**SemVer (Semantic Versioning)**: A formal convention for specifying compatibility using a three-part version number: MAJOR.MINOR.PATCH.
+
+**WCAG (Web Content Accessibility Guidelines)**: Guidelines published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet.
 
 ## T
 
@@ -257,4 +279,4 @@ This document provides definitions for common terms and acronyms used throughout
 
 ## Z
 
-**Zero Downtime Deployment**: A deployment strategy where the application remains available to users throughout the deployment process. 
+**Zero Downtime Deployment**: A deployment strategy where the application remains available to users throughout the deployment process.

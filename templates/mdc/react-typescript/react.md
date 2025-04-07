@@ -40,6 +40,7 @@ const Button = ({ text, onClick, variant = 'primary' }: IButtonProps) => {
 - Memoize callbacks with useCallback for child components
 - Memoize expensive calculations with useMemo
 - Utilize React.memo for pure components
+- Implement accessibility best practices (e.g., semantic HTML, ARIA attributes)
 
 ## State Management
 
@@ -59,3 +60,4 @@ const Button = ({ text, onClick, variant = 'primary' }: IButtonProps) => {
 - Lazy load components with React.lazy and Suspense
 - Use windowing for long lists (react-window or react-virtualized)
 - Avoid unnecessary re-renders by memoizing components and callbacks
+- Profile component performance using React DevTools

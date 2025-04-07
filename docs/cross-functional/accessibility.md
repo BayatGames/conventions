@@ -105,6 +105,8 @@ All products must undergo the following accessibility testing:
 
 3. **User testing** with people with disabilities when possible
 
+See [Frontend Testing Standards](docs/quality/frontend-testing.md#accessibility-testing) for detailed testing guidance.
+
 ## Documentation Requirements
 
 Every project must include:
@@ -129,4 +131,10 @@ Every project must include:
 - **Designers**: Create accessible designs
 - **Developers**: Implement accessible code
 - **QA Engineers**: Test for accessibility issues
-- **Project Managers**: Schedule accessibility testing and remediation 
+- **Project Managers**: Schedule accessibility testing and remediation
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

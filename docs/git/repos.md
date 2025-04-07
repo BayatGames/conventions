@@ -9,7 +9,7 @@ Change Log:
 
 # Git Repositories Conventions
 
-This document outlines Bayat's repository conventions, guidelines, and standards. It provides a comprehensive framework for repository management that integrates with the \1\2) and \1\2) to ensure consistency across all project types.
+This document outlines Bayat's repository conventions, guidelines, and standards. It provides a comprehensive framework for repository management that integrates with the [Bayat Git Flow](docs/git/flow.md) and [Git Commits Conventions](docs/git/commits.md) to ensure consistency across all project types.
 
 ## Introduction
 
@@ -22,6 +22,12 @@ Well-structured repositories are fundamental to efficient development workflows.
 - Documentation requirements
 
 Following these guidelines ensures consistent repository management across all Bayat teams and project types.
+
+## Naming Conventions
+
+Follow the Bayat standard [Naming Conventions](docs/general/naming.md) for projects, namespaces, packages, files, and directories.
+
+Specifically for repositories:
 
 ## Repository Naming Conventions
 
@@ -497,4 +503,62 @@ Every repository must have a comprehensive README.md containing:
 
 Example README structure:
 
-``
+````markdown
+# Project Title
+
+[![Build Status](https://img.shields.io/...)](https://...)
+[![Coverage Status](https://img.shields.io/...)](https://...)
+[![Version](https://img.shields.io/...)](https://...)
+
+[Brief project description - one or two sentences]
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Architecture](#architecture)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+### Prerequisites
+
+- [List prerequisites, e.g., Node.js version, specific tools]
+
+### Setup Steps
+
+1. Clone the repository: `git clone ...`
+2. Install dependencies: `npm install`
+3. Configure environment: `cp .env.example .env`
+4. ...
+
+## Usage
+
+[Explain how to run or use the project. Provide basic examples.]
+
+```bash
+# Example command
+npm start
+```
+
+## Architecture
+
+[Brief overview of the architecture. Link to detailed architecture docs.]
+
+![Architecture Diagram](docs/architecture/diagrams/overview.png)
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the [License Name] License - see the [LICENSE](LICENSE) file for details.
+````
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

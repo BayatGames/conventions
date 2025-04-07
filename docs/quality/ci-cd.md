@@ -10,6 +10,7 @@ Change Log:
 # Continuous Integration and Continuous Deployment Standards
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [CI/CD Principles](#cicd-principles)
 3. [Pipeline Structure](#pipeline-structure)
@@ -336,6 +337,18 @@ jobs:
 - Implement security review process
 - Document security exceptions
 - Track security metrics
+
+### Integration with Security Testing
+
+Integrate various security testing methods:
+
+- **SAST**: Analyze code for vulnerabilities during development and build
+- **DAST**: Test running applications in staging environments
+- **SCA**: Check dependencies for known vulnerabilities
+- **Container Scanning**: Scan container images before deployment
+- **IaC Scanning**: Scan infrastructure code for misconfigurations
+
+Refer to [DevSecOps Practices](docs/security/devsecops.md) for more details.
 
 ## Artifact Management
 
@@ -750,4 +763,18 @@ jobs:
 - Create onboarding materials
 - Document common workflows
 - Share knowledge and best practices
-- Continuously update training materials 
+- Continuously update training materials
+
+### Test Failure Handling
+
+- Implement automated rollback on test failures
+- Document rollback procedures
+- Track rollback events
+- Analyze rollback causes
+- Continuously improve test failure handling
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

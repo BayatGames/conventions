@@ -107,8 +107,9 @@ This document outlines best practices for optimizing performance in Unity projec
 
 - **Share materials** between objects when possible
 - **Use appropriate shader complexity** for target platforms
+- **Optimize shader keywords** and variants to reduce build size and memory
 - **Consider using Shader Graph** for complex shader effects with built-in optimizations
-- **Implement Level of Detail (LOD)** for complex materials
+- **Implement Level of Detail (LOD)** for complex materials and meshes
 
 ### Lighting and Shadows
 

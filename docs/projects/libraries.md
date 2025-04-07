@@ -9,7 +9,20 @@ Change Log:
 
 # Libraries and Packages Development Standards
 
+This document outlines specific standards and considerations for developing libraries and packages at Bayat, complementing the core conventions.
+
+## Core Technologies
+
+- **Languages**: Follow relevant language standards ([JavaScript](docs/languages/javascript.md), [TypeScript](docs/languages/typescript.md), [Python](docs/languages/python.md), [C#](docs/languages/csharp.md), [Java](docs/languages/java.md), [Rust](docs/languages/rust.md), [Go](docs/languages/go.md), etc.).
+
+## Design Principles
+
+- **API Design**: Adhere to [API Design Standards](docs/architecture/api-design.md) for public interfaces.
+- **Versioning**: Strictly follow [Versioning Standards](docs/versioning/standards.md).
+- **Documentation**: Adhere to [Code Documentation Standards](docs/documentation/code.md) and [API Documentation Standards](docs/documentation/api.md).
+
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Library Design Principles](#library-design-principles)
 3. [Project Structure](#project-structure)
@@ -59,7 +72,7 @@ This document outlines the standard conventions and best practices for developin
 
 ### General Structure
 
-```
+```plaintext
 library-name/
 ├── src/                      # Source code
 │   ├── main/                 # Main library code
@@ -85,7 +98,7 @@ library-name/
 
 #### JavaScript/TypeScript
 
-```
+```plaintext
 js-library/
 ├── src/                      # Source code
 ├── dist/                     # Compiled output
@@ -103,7 +116,7 @@ js-library/
 
 #### Python
 
-```
+```plaintext
 python-library/
 ├── src/
 │   └── library_name/         # Main package
@@ -122,7 +135,7 @@ python-library/
 
 #### C#/.NET
 
-```
+```plaintext
 dotnet-library/
 ├── src/
 │   └── LibraryName/          # Main project
@@ -221,7 +234,7 @@ async function fetchUser(userId, options = {}) {
 
 ### README Structure
 
-```markdown
+````markdown
 # Library Name
 
 Brief description of the library.
@@ -258,7 +271,8 @@ Contributions are welcome! Please see \1\2) for details.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
+
+````
 
 ## Versioning
 
@@ -653,4 +667,4 @@ function formatDateString(date, format) {
 - Implement peer reviews
 - Use automated code quality checks
 - Document review findings
-- Track quality metrics over time 
+- Track quality metrics over time

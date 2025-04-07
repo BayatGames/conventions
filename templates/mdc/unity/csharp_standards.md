@@ -118,6 +118,34 @@ For Unity packages and games, follow these package identifier conventions:
 - Unity packages: `io.bayat.unity.{category}` (e.g., `io.bayat.unity.ui`)
 - Game bundles: `io.bayat.games.{gamename}` (e.g., `io.bayat.games.twins`)
 
+## Code Documentation
+
+- Use **XML documentation comments** (`///`) for public classes, methods, and properties
+- Describe the purpose, parameters, and return values
+- Keep documentation concise and up-to-date
+
+```csharp
+/// <summary>
+/// Manages the player's health and damage state.
+/// </summary>
+public class PlayerHealth : MonoBehaviour
+{
+    /// <summary>
+    /// Gets the current health of the player.
+    /// </summary>
+    public float CurrentHealth { get; private set; }
+
+    /// <summary>
+    /// Applies damage to the player.
+    /// </summary>
+    /// <param name="amount">The amount of damage to apply.</param>
+    public void TakeDamage(float amount)
+    {
+        // ... implementation
+    }
+}
+```
+
 ## Best Practices
 
 ### General

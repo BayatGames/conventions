@@ -6,43 +6,150 @@
       "description": "Rules for commit messages following conventional commits specification",
       "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
       "file_patterns": [".git/COMMIT_EDITMSG"],
-      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description",
+      "documentation": "docs/git/commits.md"
     },
     {
-      "name": "NodeJS Standards",
-      "description": "Node.js coding standards and best practices",
-      "file_patterns": ["*.js", "*.ts"],
+      "name": "Node.js Standards",
+      "description": "Node.js development patterns and best practices",
+      "file_patterns": ["*.js", "*.mjs", "*.cjs", "*.ts", "**/package.json"],
       "documentation": ".cursor/mdc/nodejs.md"
+    },
+    {
+      "name": "TypeScript Standards",
+      "description": "TypeScript coding standards and best practices",
+      "file_patterns": ["*.ts", "*.tsx"],
+      "documentation": "docs/languages/typescript.md"
+    },
+    {
+      "name": "JavaScript Standards",
+      "description": "JavaScript coding standards and best practices",
+      "file_patterns": ["*.js", "*.jsx"],
+      "documentation": "docs/languages/javascript.md"
     },
     {
       "name": "API Design",
       "description": "API design standards and best practices",
-      "file_patterns": ["**/routes/**/*.js", "**/routes/**/*.ts", "**/controllers/**/*.js", "**/controllers/**/*.ts"],
+      "file_patterns": ["**/api/**/*.js", "**/api/**/*.ts", "**/controllers/**/*.js", "**/controllers/**/*.ts", "**/routes/**/*.js", "**/routes/**/*.ts"],
       "documentation": ".cursor/mdc/api_design.md"
     },
     {
       "name": "Database Access",
       "description": "Database interaction best practices",
-      "file_patterns": ["**/models/**/*.js", "**/models/**/*.ts", "**/repositories/**/*.js", "**/repositories/**/*.ts"],
-      "documentation": ".cursor/mdc/database.md"
+      "file_patterns": ["**/models/**/*.js", "**/models/**/*.ts", "**/repositories/**/*.js", "**/repositories/**/*.ts"]
     },
     {
       "name": "Authentication",
-      "description": "Authentication and security best practices",
-      "file_patterns": ["**/auth/**/*.js", "**/auth/**/*.ts", "**/middleware/auth*.js", "**/middleware/auth*.ts"],
-      "documentation": ".cursor/mdc/authentication.md"
+      "description": "Authentication implementation details",
+      "file_patterns": ["**/auth/**/*.js", "**/auth/**/*.ts", "**/middleware/auth*.js", "**/middleware/auth*.ts"]
     },
     {
       "name": "Error Handling",
       "description": "Error handling patterns and standards",
-      "file_patterns": ["**/errors/**/*.js", "**/errors/**/*.ts", "**/middleware/error*.js", "**/middleware/error*.ts"],
-      "documentation": ".cursor/mdc/error_handling.md"
+      "file_patterns": ["**/errors/**/*.js", "**/errors/**/*.ts", "**/middleware/error*.js", "**/middleware/error*.ts"]
     },
     {
-      "name": "Testing Standards",
-      "description": "Backend testing best practices",
+      "name": "Test Coverage",
+      "description": "Testing standards and requirements",
       "file_patterns": ["**/*.test.js", "**/*.test.ts", "**/*.spec.js", "**/*.spec.ts"],
-      "documentation": ".cursor/mdc/backend_testing.md"
+      "documentation": "docs/quality/testing.md"
+    },
+    {
+      "name": "Git Flow",
+      "description": "Branch naming and workflow standards",
+      "file_patterns": [".git/HEAD"],
+      "pattern": "refs/heads/(main|master|develop|feature/|bugfix/|hotfix/|release/)",
+      "documentation": "docs/git/flow.md"
+    },
+    {
+      "name": "API Documentation Standards",
+      "description": "Standards for documenting APIs (OpenAPI, etc.)",
+      "file_patterns": ["**/api/**/*.yaml", "**/api/**/*.json", "**/swagger.json", "**/openapi.yaml"],
+      "documentation": "docs/documentation/api.md"
+    },
+    {
+      "name": "Documentation Standards",
+      "description": "Documentation requirements and formatting",
+      "file_patterns": ["**/*.md", "**/*.mdx"],
+      "documentation": "docs/documentation/technical.md"
+    },
+    {
+      "name": "Bayat Naming Conventions",
+      "description": "Namespace and package identifier standards for Bayat projects",
+      "file_patterns": ["**/*.ts", "**/*.js", "**/package.json"],
+      "documentation": "docs/general/naming.md"
+    },
+    {
+      "name": "Code Documentation Standards",
+      "description": "Standards for documenting code (comments, docstrings, etc.)",
+      "file_patterns": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+      "documentation": "docs/documentation/code.md"
+    },
+    {
+      "name": "Secure Coding Standards",
+      "description": "Guidelines for writing secure code",
+      "file_patterns": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.py", "**/*.cs", "**/*.java", "**/*.go", "**/*.php"],
+      "documentation": "docs/security/coding.md"
+    },
+    {
+      "name": "CI/CD Standards",
+      "description": "Standards for Continuous Integration and Continuous Delivery pipelines",
+      "file_patterns": [".github/workflows/*.yml", ".github/workflows/*.yaml", "Jenkinsfile", ".gitlab-ci.yml"],
+      "documentation": "docs/quality/ci-cd.md"
+    },
+    {
+      "name": "Code Review Standards",
+      "description": "Guidelines for conducting effective code reviews",
+      "file_patterns": ["**/*"],
+      "documentation": "docs/quality/code-reviews.md"
+    },
+    {
+      "name": "Dependency Management",
+      "description": "Standards for managing project dependencies",
+      "file_patterns": ["**/package.json"],
+      "documentation": "docs/dependencies/management.md"
+    },
+    {
+      "name": "Architecture Decision Records",
+      "description": "Standards for documenting architectural decisions",
+      "file_patterns": ["docs/architecture/adr/*.md", "docs/adr/*.md", "**/adr/*.md"],
+      "documentation": "docs/architecture/architecture-decision-records.md"
+    },
+    {
+      "name": "Authentication Standards",
+      "description": "Guidelines for implementing secure authentication",
+      "file_patterns": ["**/auth*/**/*.{js,ts,py,cs,java,go}", "**/security*/**/*.{js,ts,py,cs,java,go}", "**/login*/**/*.{js,ts,py,cs,java,go}"],
+      "documentation": "docs/security/authentication.md"
+    },
+    {
+      "name": "Git Repository Standards",
+      "description": "Standards for naming, structuring, and configuring Git repositories",
+      "file_patterns": ["README.md", ".gitignore", ".gitattributes"],
+      "documentation": "docs/git/repos.md"
+    },
+    {
+        "name": "Microservices Architecture Standards",
+        "description": "Standards for designing, building, and operating microservices",
+        "file_patterns": ["**/*service*/**/*.js", "**/*service*/**/*.ts"],
+        "documentation": "docs/architecture/microservices.md"
+    },
+    {
+      "name": "Database Standards",
+      "description": "Standards for database design, development, and management",
+      "file_patterns": ["**/*.sql", "**/migrations/*.js", "**/migrations/*.ts", "**/models/*.js", "**/models/*.ts", "**/schemas/*.json"],
+      "documentation": "docs/architecture/database-standards.md"
+    },
+    {
+      "name": "Code Refactoring Guidelines",
+      "description": "Guidelines for when and how to approach code refactoring",
+      "file_patterns": ["**/*.js", "**/*.ts"],
+      "documentation": "docs/quality/code-refactoring.md"
+    },
+    {
+        "name": "Versioning Standards",
+        "description": "Standards for software and convention versioning",
+        "file_patterns": ["**/package.json", "CHANGELOG.md"],
+        "documentation": "docs/versioning/standards.md"
     }
   ]
 } 

@@ -402,4 +402,4 @@ public void CalculateDamage_WithCriticalHit_ReturnsDoubleDamage()
 
 | Version | Date | Description |
 |---------|------|-------------|
-| 1.0 | YYYY-MM-DD | Initial version | 
+| 1.0 | 2025-03-20 | Initial version | 

@@ -10,6 +10,7 @@ Change Log:
 # Angular Development Conventions
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
 3. [Component Architecture](#component-architecture)
@@ -218,9 +219,11 @@ export class DataService {
 ### Global State
 
 For small to medium applications:
+
 - Use services with `BehaviorSubject` for simple global state
 
 For larger applications:
+
 - Use NgRx for complex state management
 - Follow the Redux pattern (actions, reducers, selectors, effects)
 - Use the facade pattern to abstract state management from components
@@ -589,4 +592,10 @@ getUser(id: string): Observable<User> {
 - Maintain up-to-date README files
 - Document environment setup procedures
 - Create onboarding guides for new developers
-- Document architectural decisions and patterns 
+- Document architectural decisions and patterns
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

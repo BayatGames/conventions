@@ -9,7 +9,7 @@ Change Log:
 
 # TypeScript Coding Conventions
 
-This document outlines the TypeScript coding conventions and standards for all Bayat projects. It builds upon our \1\2) with additional TypeScript-specific guidelines.
+This document outlines the TypeScript coding conventions and standards for all Bayat projects. It builds upon our [JavaScript Coding Conventions](docs/languages/javascript.md) with additional TypeScript-specific guidelines.
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ This document outlines the TypeScript coding conventions and standards for all B
 
 ## TypeScript Version
 
-- Specify TypeScript version in `package.json` 
+- Specify TypeScript version in `package.json`
 - Document the minimum supported TypeScript version in README.md
 - Stay within one major version of the latest stable release
 
@@ -552,4 +552,4 @@ describe('isUser', () => {
 
 | Version | Date | Description |
 |---------|------|-------------|
-| 1.0 | YYYY-MM-DD | Initial version | 
+| 1.0 | 2025-03-20 | Initial version |

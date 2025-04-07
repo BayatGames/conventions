@@ -20,3 +20,5 @@ For more detailed documentation, refer to the full convention docs:
 - [Node.js Standards](../../../docs/frameworks/nodejs.md)
 - [API Design](../../../docs/architecture/api-design.md)
 - [Backend Architecture](../../../docs/architecture/backend.md)
+- [Test Coverage](../../../docs/quality/testing.md)
+- [Database Standards](../../../docs/architecture/database-standards.md)

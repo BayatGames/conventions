@@ -6,11 +6,12 @@
       "description": "Rules for commit messages following conventional commits specification",
       "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
       "file_patterns": [".git/COMMIT_EDITMSG"],
-      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description",
+      "documentation": "docs/git/commits.md"
     },
     {
-      "name": "C# Coding Standards",
-      "description": "C# naming conventions, structure, and best practices for Unity",
+      "name": "C# Coding Standards (Template Specific)",
+      "description": "C# naming conventions, structure, and best practices for Unity (Template Context)",
       "file_patterns": ["*.cs"],
       "documentation": ".cursor/mdc/csharp_standards.md"
     },
@@ -23,7 +24,7 @@
     {
       "name": "Asset Management",
       "description": "Project organization, asset handling, and folder structure",
-      "file_patterns": ["**/Assets/**/*"],
+      "file_patterns": ["**/Assets/**/*", "**/ProjectSettings/ProjectSettings.asset"],
       "documentation": ".cursor/mdc/asset_management.md"
     },
     {
@@ -57,16 +58,95 @@
       "documentation": ".cursor/mdc/csharp_standards.md"
     },
     {
-      "name": "Unity Project Settings",
-      "description": "Best practices for Unity project configuration",
-      "file_patterns": ["**/ProjectSettings/**/*"],
-      "documentation": ".cursor/mdc/asset_management.md"
+      "name": "Bayat Naming Conventions",
+      "description": "Namespace and package identifier standards for Bayat projects",
+      "file_patterns": ["**/*.cs", "**/*.asmdef", "**/package.json"],
+      "documentation": "docs/general/naming.md"
     },
     {
-      "name": "Naming Conventions",
-      "description": "Bayat-specific naming conventions for namespaces and package identifiers",
-      "file_patterns": ["*.cs", "*.asmdef", "package.json", "**/ProjectSettings/ProjectSettings.asset"],
-      "documentation": ".cursor/mdc/csharp_standards.md"
+      "name": "Git Flow",
+      "description": "Branch naming and workflow standards",
+      "file_patterns": [".git/HEAD"],
+      "pattern": "refs/heads/(main|master|develop|feature/|bugfix/|hotfix/|release/)",
+      "documentation": "docs/git/flow.md"
+    },
+    {
+      "name": "Test Coverage",
+      "description": "Testing standards and requirements",
+      "file_patterns": ["**/*.Test.cs", "**/*.Tests.cs", "**/*.test.cs", "**/*.tests.cs"],
+      "documentation": "docs/quality/testing.md"
+    },
+    {
+      "name": "Documentation Standards",
+      "description": "Documentation requirements and formatting",
+      "file_patterns": ["**/*.md", "**/*.mdx"],
+      "documentation": "docs/documentation/technical.md"
+    },
+    {
+      "name": "Code Documentation Standards",
+      "description": "Standards for documenting code (comments, docstrings, etc.)",
+      "file_patterns": ["**/*.cs"],
+      "documentation": "docs/documentation/code.md"
+    },
+    {
+      "name": "Secure Coding Standards",
+      "description": "Guidelines for writing secure code",
+      "file_patterns": ["**/*.cs"],
+      "documentation": "docs/security/coding.md"
+    },
+    {
+      "name": "CI/CD Standards",
+      "description": "Standards for Continuous Integration and Continuous Delivery pipelines",
+      "file_patterns": [".github/workflows/*.yml", ".github/workflows/*.yaml"],
+      "documentation": "docs/quality/ci-cd.md"
+    },
+    {
+      "name": "Code Review Standards",
+      "description": "Guidelines for conducting effective code reviews",
+      "file_patterns": ["**/*"],
+      "documentation": "docs/quality/code-reviews.md"
+    },
+    {
+      "name": "Dependency Management",
+      "description": "Standards for managing project dependencies (UPM)",
+      "file_patterns": ["**/package.json", "**/Packages/manifest.json", "**/*.asmdef"],
+      "documentation": "docs/dependencies/management.md"
+    },
+    {
+      "name": "Architecture Decision Records",
+      "description": "Standards for documenting architectural decisions",
+      "file_patterns": ["docs/architecture/adr/*.md", "docs/adr/*.md", "**/adr/*.md"],
+      "documentation": "docs/architecture/architecture-decision-records.md"
+    },
+    {
+      "name": "Git Repository Standards",
+      "description": "Standards for naming, structuring, and configuring Git repositories",
+      "file_patterns": ["README.md", ".gitignore", ".gitattributes"],
+      "documentation": "docs/git/repos.md"
+    },
+    {
+      "name": "C# Standards",
+      "description": "C# coding standards and best practices (Main Doc)",
+      "file_patterns": ["*.cs"],
+      "documentation": "docs/languages/csharp.md"
+    },
+    {
+      "name": "Unity Standards",
+      "description": "Unity development patterns and best practices (Main Doc)",
+      "file_patterns": ["*.cs", "*.unity", "*.prefab", "*.asset", "*.asmdef"],
+      "documentation": "docs/frameworks/unity.md"
+    },
+    {
+      "name": "Code Refactoring Guidelines",
+      "description": "Guidelines for when and how to approach code refactoring",
+      "file_patterns": ["**/*.cs"],
+      "documentation": "docs/quality/code-refactoring.md"
+    },
+    {
+        "name": "Versioning Standards",
+        "description": "Standards for software and convention versioning",
+        "file_patterns": ["**/package.json", "**/ProjectSettings/ProjectSettings.asset", "CHANGELOG.md"],
+        "documentation": "docs/versioning/standards.md"
     }
   ]
 } 

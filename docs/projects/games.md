@@ -9,7 +9,18 @@ Change Log:
 
 # Game Development Standards
 
-This document outlines Bayat's standards and best practices for game development projects. It provides guidelines for game architecture, design patterns, and project organization to ensure consistency and quality across all game projects.
+This document outlines specific standards and considerations for game development at Bayat, complementing the core conventions.
+
+## Core Technologies
+
+- **Game Engines**: Refer to [Unity Conventions](docs/frameworks/unity.md) and [Unreal Engine Conventions](docs/frameworks/unreal.md).
+- **Languages**: Follow [C# Standards](docs/languages/csharp.md) (for Unity) and [C++ Standards](docs/languages/c++.md) (for Unreal).
+
+## Architecture
+
+- **API Design**: Adhere to [API Design Standards](docs/architecture/api-design.md) for backend services.
+- **Data Storage**: Follow [Database Standards](docs/architecture/database-standards.md) for backend.
+- **Microservices**: If applicable, refer to [Microservices Architecture Standards](docs/architecture/microservices.md).
 
 ## Table of Contents
 
@@ -411,4 +422,4 @@ Define clear performance targets for each platform:
 
 | Version | Date | Description |
 |---------|------|-------------|
-| 1.0 | YYYY-MM-DD | Initial version | 
+| 1.0 | YYYY-MM-DD | Initial version |

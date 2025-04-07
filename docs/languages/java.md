@@ -14,6 +14,7 @@ This document outlines the standards and best practices for Java development at 
 ## Code Style and Formatting
 
 ### General Guidelines
+
 - Follow the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) with specific Bayat modifications noted in this document
 - Use 4 spaces for indentation, not tabs
 - Maximum line length should be 100 characters
@@ -21,6 +22,7 @@ This document outlines the standards and best practices for Java development at 
 - Files should end with a newline
 
 ### Naming Conventions
+
 1. **Classes and Interfaces**:
    - Use PascalCase (e.g., `OrderProcessor`, `CustomerRepository`)
    - Classes should be nouns
@@ -42,6 +44,7 @@ This document outlines the standards and best practices for Java development at 
    - Avoid underscores or other special characters
 
 ### Code Organization
+
 1. **Class Structure**:
    - Order of elements: static fields, instance fields, constructors, methods
    - Public methods before protected and private methods
@@ -59,11 +62,13 @@ This document outlines the standards and best practices for Java development at 
 ## Language Features and Patterns
 
 ### Java Version
+
 - Default to Java 17 LTS for new projects
 - Consider Java 21 (or latest LTS) for projects specifically needing newer features
 - Maintain backward compatibility as required by the project
 
 ### Recommended Features
+
 1. **Java 8+ Features**:
    - Prefer lambda expressions for functional interfaces
    - Use Stream API for collection operations where appropriate
@@ -86,6 +91,7 @@ This document outlines the standards and best practices for Java development at 
    - Use switch expressions for multi-way conditionals
 
 ### Discouraged Practices
+
 - Avoid raw types (use generics)
 - Minimize use of checked exceptions for control flow
 - Avoid unnecessary object creation
@@ -97,6 +103,7 @@ This document outlines the standards and best practices for Java development at 
 ## Common Design Patterns
 
 ### Recommended Patterns
+
 1. **Creational Patterns**:
    - Builder Pattern for complex object construction
    - Factory Method for object creation logic
@@ -113,6 +120,7 @@ This document outlines the standards and best practices for Java development at 
    - Command for action encapsulation
 
 ### Dependency Injection
+
 - Use constructor injection as the primary DI approach
 - Field injection should be avoided except in tests
 - Use Spring Framework annotations consistently
@@ -120,6 +128,7 @@ This document outlines the standards and best practices for Java development at 
 ## Error Handling
 
 ### Exception Usage
+
 1. **Exception Types**:
    - Use unchecked exceptions (runtime) for programming errors
    - Use checked exceptions only when the caller should handle the exception
@@ -140,6 +149,7 @@ This document outlines the standards and best practices for Java development at 
 ## Concurrency
 
 ### Thread Safety
+
 1. **Immutability**:
    - Make classes immutable when possible
    - Use final fields for immutable objects
@@ -160,6 +170,7 @@ This document outlines the standards and best practices for Java development at 
 ## Testing
 
 ### Unit Testing
+
 1. **Testing Framework**:
    - Use JUnit 5 for unit tests
    - Use Mockito for mocking dependencies
@@ -178,6 +189,7 @@ This document outlines the standards and best practices for Java development at 
    - Test exception paths
 
 ### Integration Testing
+
 - Use Spring Boot Test for integration tests
 - Use TestContainers for external dependencies
 - Clean up test resources after tests
@@ -186,6 +198,7 @@ This document outlines the standards and best practices for Java development at 
 ## Documentation
 
 ### Code Documentation
+
 1. **Javadoc**:
    - All public APIs must have Javadoc comments
    - Document parameters, returns, exceptions thrown
@@ -201,6 +214,7 @@ This document outlines the standards and best practices for Java development at 
 ## Build and Dependency Management
 
 ### Maven Configuration
+
 1. **Project Structure**:
    - Follow standard Maven directory structure
    - Use Maven wrapper for consistent builds
@@ -218,6 +232,7 @@ This document outlines the standards and best practices for Java development at 
    - Externalize configuration from pom.xml where appropriate
 
 ### Gradle Configuration
+
 - Use Gradle Kotlin DSL for build scripts
 - Follow conventions for directory structure
 - Use version catalogs for dependency management
@@ -226,6 +241,7 @@ This document outlines the standards and best practices for Java development at 
 ## Frameworks and Libraries
 
 ### Spring Framework
+
 1. **Spring Boot**:
    - Use Spring Boot for new applications
    - Follow Spring Boot conventions and defaults
@@ -239,6 +255,7 @@ This document outlines the standards and best practices for Java development at 
    - Externalize configuration using @ConfigurationProperties
 
 ### Persistence
+
 1. **JPA/Hibernate**:
    - Follow JPA entity design best practices
    - Use appropriate fetch strategies
@@ -254,6 +271,7 @@ This document outlines the standards and best practices for Java development at 
 ## Code Quality
 
 ### Static Analysis
+
 1. **Tools**:
    - Use SonarQube for code quality analysis
    - Configure SpotBugs for bug detection
@@ -267,6 +285,7 @@ This document outlines the standards and best practices for Java development at 
    - Code duplication under 5%
 
 ### Performance
+
 1. **Optimization**:
    - Optimize only after profiling
    - Consider memory usage and garbage collection
@@ -280,7 +299,14 @@ This document outlines the standards and best practices for Java development at 
    - Consider performance during code reviews
 
 ## References
+
 - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 - [Effective Java by Joshua Bloch](https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/)
 - [Spring Framework Documentation](https://docs.spring.io/spring-framework/reference/index.html)
-- [Oracle Java Coding Guidelines](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html) 
+- [Oracle Java Coding Guidelines](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html)
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

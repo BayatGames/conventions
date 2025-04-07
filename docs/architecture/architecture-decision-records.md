@@ -418,3 +418,11 @@ We will use PostgreSQL as our standard relational database for all new transacti
 ## Notes
 
 PostgreSQL's combination of enterprise features, cost model, and cloud support makes it the optimal choice despite the migration challenges.
+
+```
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

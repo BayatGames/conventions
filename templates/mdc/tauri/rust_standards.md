@@ -125,7 +125,7 @@ pub async fn get_user_data(user_id: String) -> Result<User, String> {
 ### Error Propagation
 
 - **Use the `?` operator** for error propagation
-- **Avoid `.unwrap()` and `.expect()`** in production code
+- **Strongly avoid `.unwrap()` and `.expect()`** in production code; handle errors explicitly using `match` or error mapping (`map_err`)
 - **Transform errors** into appropriate types when crossing API boundaries
 - **Provide context** when converting errors:
 

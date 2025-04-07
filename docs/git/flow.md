@@ -162,7 +162,7 @@ Resolves: #123
 fix(ui): correct button alignment on checkout page
 ```
 
-For comprehensive guidelines on commit messages, including detailed descriptions of each commit type, scope conventions, and project-specific examples, refer to the \1\2).
+For comprehensive guidelines on commit messages, including detailed descriptions of each commit type, scope conventions, and project-specific examples, refer to the [Git Commits Conventions](docs/git/commits.md).
 
 ## Pull Request Guidelines
 
@@ -445,3 +445,9 @@ Updates to this document should follow the standard PR process with team review.
 ## Conclusion
 
 The Bayat Git Flow is designed to support all project types within the company while maintaining consistency and quality. By following these guidelines, we ensure efficient development, clear history, and stable releases across our diverse project portfolio.
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

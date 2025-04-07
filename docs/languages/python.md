@@ -63,6 +63,7 @@ All Python code should follow [PEP 8](https://www.python.org/dev/peps/pep-0008/)
 - Avoid wildcard imports (`from module import *`)
 
 Example:
+
 ```python
 # Standard library
 import os
@@ -86,6 +87,7 @@ from ..utils import helpers
 - For improved readability, consider using type aliases for complex types
 
 Example:
+
 ```python
 from typing import Dict, List, Optional, Tuple, Union
 
@@ -490,6 +492,7 @@ subprocess.run(["convert", filename, "output.png"], check=True)
 - Pin specific base image versions
 
 Example Dockerfile:
+
 ```dockerfile
 FROM python:3.9-slim AS builder
 
@@ -551,6 +554,7 @@ CMD ["python", "-m", "src.main"]
 - Use strong typing for configuration objects
 
 Example with Pydantic:
+
 ```python
 from pydantic import BaseSettings, Field, PostgresDsn, validator
 from typing import Optional
@@ -582,6 +586,7 @@ settings = Settings()
 ### Visual Studio Code
 
 Recommended extensions:
+
 - Python (Microsoft)
 - Pylance
 - Python Docstring Generator
@@ -589,6 +594,7 @@ Recommended extensions:
 - Python Test Explorer
 
 Workspace settings (`settings.json`):
+
 ```json
 {
     "python.formatting.provider": "black",
@@ -612,13 +618,21 @@ Workspace settings (`settings.json`):
 ### PyCharm
 
 Recommended plugins:
+
 - Python Security
 - Requirements
 - Mypy
 - Black
 
 Configuration:
+
 - Enable Black as external tool for formatting
 - Configure isort as external tool for import sorting
 - Setup mypy for type checking
-- Configure pytest as the default test runner 
+- Configure pytest as the default test runner
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

@@ -98,3 +98,10 @@ module.exports = {
 - Keep secrets out of the code
 - Use a configuration service/module
 - Validate configuration on startup
+
+## Dependency Management
+
+- Use npm or yarn consistently for package management
+- Keep dependencies updated
+- Use `package-lock.json` or `yarn.lock` for reproducible builds
+- Review dependencies for security vulnerabilities

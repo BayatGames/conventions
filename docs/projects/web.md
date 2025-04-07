@@ -1,6 +1,22 @@
-# Web Application Development Standards
+# Web Development Standards
+
+This document outlines specific standards and considerations for web application development at Bayat, complementing the core conventions.
+
+## Core Technologies
+
+- **Frontend Frameworks**: Refer to [React Conventions](docs/frameworks/react.md) and [Angular Conventions](docs/frameworks/angular.md).
+- **Backend Frameworks**: Refer to [Node.js Conventions](docs/frameworks/nodejs.md) and language-specific standards ([Python](docs/languages/python.md), [Java](docs/languages/java.md), etc.).
+- **Languages**: Follow [JavaScript Standards](docs/languages/javascript.md) and [TypeScript Standards](docs/languages/typescript.md).
+
+## Architecture
+
+- **API Design**: Adhere to [API Design Standards](docs/architecture/api-design.md).
+- **Database Choice**: Follow [Database Standards](docs/architecture/database-standards.md).
+- **Microservices**: If applicable, refer to [Microservices Architecture Standards](docs/architecture/microservices.md).
+- **Authentication**: Implement using [Authentication Standards](docs/security/authentication.md).
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Architecture](#architecture)
 3. [Frontend Development](#frontend-development)
@@ -764,4 +780,4 @@ function WelcomeMessage({ username }) {
 - Document decisions and rationales
 - Conduct regular team meetings
 - Use asynchronous communication when appropriate
-- Maintain up-to-date documentation 
+- Maintain up-to-date documentation

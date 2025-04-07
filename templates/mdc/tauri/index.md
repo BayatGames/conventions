@@ -21,4 +21,7 @@ For more detailed documentation, refer to the full convention docs:
 
 - [Rust Standards](../../../docs/languages/rust.md)
 - [Tauri Standards](../../../docs/frameworks/tauri.md)
+- [Test Coverage](../../../docs/quality/testing.md)
+- [Frontend Testing Standards](../../../docs/quality/frontend-testing.md)
+- [Dependency Management](../../../docs/dependencies/management.md)
 - [Desktop App Architecture](../../../docs/architecture/desktop.md)

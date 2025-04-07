@@ -561,7 +561,7 @@ These stories can be used with Chromatic, Percy, or other visual testing tools t
 
 ## Accessibility Testing
 
-Accessibility tests verify that the application is usable by people with disabilities. See the \1\2) document for in-depth guidance.
+Accessibility tests verify that the application is usable by people with disabilities. See the [Accessibility Standards](docs/cross-functional/accessibility.md) document for in-depth guidance.
 
 ### What to Test for Accessibility
 
@@ -1126,4 +1126,10 @@ Avoid these common testing mistakes.
 4. **Vue Router**: Mock router when testing routed components
 5. **Test Props Interface**: Verify component props behavior
 6. **Test Events**: Verify custom events are emitted correctly
-7. **Snapshot Testing**: Use sparingly for stable components 
+7. **Snapshot Testing**: Use sparingly for stable components
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

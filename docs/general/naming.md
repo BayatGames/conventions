@@ -1,3 +1,12 @@
+<!--
+Document: Bayat Naming Conventions
+Version: 1.0.0
+Last Updated: 2025-04-06
+Last Updated By: Bayat Platform Team
+Change Log:
+- 2025-04-06: Initial version
+-->
+
 # Bayat Naming Conventions
 
 This document outlines the standardized naming conventions for namespaces, package identifiers, and other naming structures across all Bayat projects.
@@ -113,3 +122,9 @@ For Rust projects:
 - Existing projects should be migrated to these conventions during major updates
 - Package identifiers should be consistent across all platforms for the same product
 - Documentation should reference these conventions explicitly
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-04-06 | Initial version |

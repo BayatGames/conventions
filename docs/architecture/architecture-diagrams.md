@@ -161,3 +161,9 @@ The following templates are available in the `/docs/architecture/diagrams/templa
 3. **Hierarchy**: Start with high-level diagrams, then drill down
 4. **Collaboration**: Review diagrams with the team
 5. **Maintenance**: Update diagrams as the architecture evolves
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

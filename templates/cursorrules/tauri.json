@@ -6,7 +6,8 @@
       "description": "Rules for commit messages following conventional commits specification",
       "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
       "file_patterns": [".git/COMMIT_EDITMSG"],
-      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description",
+      "documentation": "docs/git/commits.md"
     },
     {
       "name": "Tauri Best Practices",
@@ -15,15 +16,15 @@
       "documentation": ".cursor/mdc/tauri_best_practices.md"
     },
     {
-      "name": "Rust Standards",
-      "description": "Rust coding conventions and patterns for Tauri backend",
-      "file_patterns": ["**/*.rs"],
+      "name": "Rust Standards (Template Specific)",
+      "description": "Rust coding conventions and patterns for Tauri backend (Template Context)",
+      "file_patterns": ["src-tauri/**/*.rs"],
       "documentation": ".cursor/mdc/rust_standards.md"
     },
     {
       "name": "Frontend Integration",
       "description": "Guidelines for connecting frontend framework with Tauri",
-      "file_patterns": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue"],
+      "file_patterns": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue", "src/**/*.svelte"],
       "documentation": ".cursor/mdc/frontend_integration.md"
     },
     {
@@ -35,38 +36,153 @@
     {
       "name": "Tauri Security",
       "description": "Security best practices for Tauri applications",
-      "file_patterns": ["src-tauri/tauri.conf.json", "src/**/*.rs", "src-tauri/**/*.rs"],
+      "file_patterns": ["src-tauri/tauri.conf.json", "src-tauri/**/*.rs"],
       "documentation": ".cursor/mdc/tauri_best_practices.md"
     },
     {
       "name": "Tauri Commands",
       "description": "Guidelines for implementing Tauri commands",
-      "file_patterns": ["src/**/commands/**/*.rs"],
+      "file_patterns": ["src-tauri/**/commands/**/*.rs"],
       "documentation": ".cursor/mdc/rust_standards.md"
     },
     {
       "name": "Tauri Events",
       "description": "Standards for using Tauri events system",
-      "file_patterns": ["src/**/*.rs", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue"],
+      "file_patterns": ["src-tauri/**/*.rs", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue", "src/**/*.svelte"],
       "documentation": ".cursor/mdc/frontend_integration.md"
     },
     {
       "name": "Configuration Management",
       "description": "Guidelines for managing Tauri application configuration",
-      "file_patterns": ["src-tauri/tauri.conf.json", "**/*.env*", "src/config/*.ts", "src/config/*.js"],
+      "file_patterns": ["src-tauri/tauri.conf.json", "**/*.env*", "src/config/*.ts", "src/config/*.js", "src-tauri/build.rs"],
       "documentation": ".cursor/mdc/project_architecture.md"
     },
     {
-      "name": "Error Handling",
-      "description": "Error handling patterns for Tauri applications",
-      "file_patterns": ["**/*.rs", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue"],
+      "name": "Error Handling (Template Specific)",
+      "description": "Error handling patterns for Tauri applications (Template Context)",
+      "file_patterns": ["src-tauri/**/*.rs", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.vue", "src/**/*.svelte"],
       "documentation": ".cursor/mdc/rust_standards.md"
     },
     {
       "name": "Bayat Naming Conventions",
-      "description": "Bayat-specific naming conventions for packages, namespaces, and identifiers",
-      "file_patterns": ["Cargo.toml", "package.json", "src-tauri/tauri.conf.json", "**/*.rs"],
-      "documentation": ".cursor/mdc/rust_standards.md"
+      "description": "Namespace and package identifier standards for Bayat projects",
+      "file_patterns": ["**/*.rs", "**/*.ts", "**/*.js", "**/Cargo.toml", "**/package.json"],
+      "documentation": "docs/general/naming.md"
+    },
+    {
+      "name": "TypeScript Standards",
+      "description": "TypeScript coding standards and best practices",
+      "file_patterns": ["src/**/*.ts", "src/**/*.tsx"],
+      "documentation": "docs/languages/typescript.md"
+    },
+    {
+      "name": "JavaScript Standards",
+      "description": "JavaScript coding standards and best practices",
+      "file_patterns": ["src/**/*.js", "src/**/*.jsx"],
+      "documentation": "docs/languages/javascript.md"
+    },
+    {
+      "name": "React Standards",
+      "description": "React development patterns and best practices",
+      "file_patterns": ["src/**/*.jsx", "src/**/*.tsx"],
+      "documentation": "docs/frameworks/react.md"
+    },
+    {
+      "name": "Git Flow",
+      "description": "Branch naming and workflow standards",
+      "file_patterns": [".git/HEAD"],
+      "pattern": "refs/heads/(main|master|develop|feature/|bugfix/|hotfix/|release/)",
+      "documentation": "docs/git/flow.md"
+    },
+    {
+      "name": "Test Coverage",
+      "description": "Testing standards and requirements",
+      "file_patterns": ["src-tauri/**/*.test.rs", "src-tauri/**/tests/*.rs", "src/**/*.test.js", "src/**/*.spec.js", "src/**/*.test.ts", "src/**/*.spec.ts", "src/**/*.test.jsx", "src/**/*.spec.jsx", "src/**/*.test.tsx", "src/**/*.spec.tsx"],
+      "documentation": "docs/quality/testing.md"
+    },
+    {
+      "name": "Frontend Testing Standards",
+      "description": "Standards and best practices for frontend testing",
+      "file_patterns": ["src/**/*.test.js", "src/**/*.spec.js", "src/**/*.test.ts", "src/**/*.spec.ts", "src/**/*.test.jsx", "src/**/*.spec.jsx", "src/**/*.test.tsx", "src/**/*.spec.tsx"],
+      "documentation": "docs/quality/frontend-testing.md"
+    },
+    {
+      "name": "Documentation Standards",
+      "description": "Documentation requirements and formatting",
+      "file_patterns": ["**/*.md", "**/*.mdx"],
+      "documentation": "docs/documentation/technical.md"
+    },
+    {
+      "name": "Code Documentation Standards",
+      "description": "Standards for documenting code (comments, docstrings, etc.)",
+      "file_patterns": ["src-tauri/**/*.rs", "src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.svelte"],
+      "documentation": "docs/documentation/code.md"
+    },
+    {
+      "name": "Secure Coding Standards",
+      "description": "Guidelines for writing secure code",
+      "file_patterns": ["src-tauri/**/*.rs", "src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+      "documentation": "docs/security/coding.md"
+    },
+    {
+      "name": "CI/CD Standards",
+      "description": "Standards for Continuous Integration and Continuous Delivery pipelines",
+      "file_patterns": [".github/workflows/*.yml", ".github/workflows/*.yaml", ".gitlab-ci.yml"],
+      "documentation": "docs/quality/ci-cd.md"
+    },
+    {
+      "name": "Code Review Standards",
+      "description": "Guidelines for conducting effective code reviews",
+      "file_patterns": ["**/*"],
+      "documentation": "docs/quality/code-reviews.md"
+    },
+    {
+      "name": "Dependency Management",
+      "description": "Standards for managing project dependencies",
+      "file_patterns": ["**/Cargo.toml", "**/package.json"],
+      "documentation": "docs/dependencies/management.md"
+    },
+    {
+      "name": "Architecture Decision Records",
+      "description": "Standards for documenting architectural decisions",
+      "file_patterns": ["docs/architecture/adr/*.md", "docs/adr/*.md", "**/adr/*.md"],
+      "documentation": "docs/architecture/architecture-decision-records.md"
+    },
+    {
+      "name": "Git Repository Standards",
+      "description": "Standards for naming, structuring, and configuring Git repositories",
+      "file_patterns": ["README.md", ".gitignore", ".gitattributes"],
+      "documentation": "docs/git/repos.md"
+    },
+    {
+        "name": "Rust Standards",
+        "description": "Rust coding standards and best practices (Main Doc)",
+        "file_patterns": ["**/*.rs"],
+        "documentation": "docs/languages/rust.md"
+    },
+    {
+        "name": "Node.js Standards",
+        "description": "Node.js development patterns and best practices (relevant for frontend tooling)",
+        "file_patterns": ["*.js", "*.mjs", "*.cjs", "*.ts", "**/package.json"],
+        "documentation": "docs/frameworks/nodejs.md"
+    },
+    {
+      "name": "Code Refactoring Guidelines",
+      "description": "Guidelines for when and how to approach code refactoring",
+      "file_patterns": ["src-tauri/**/*.rs", "src/**/*.js", "src/**/*.ts", "src/**/*.jsx", "src/**/*.tsx"],
+      "documentation": "docs/quality/code-refactoring.md"
+    },
+    {
+        "name": "Versioning Standards",
+        "description": "Standards for software and convention versioning",
+        "file_patterns": ["**/Cargo.toml", "**/package.json", "src-tauri/tauri.conf.json", "CHANGELOG.md"],
+        "documentation": "docs/versioning/standards.md"
+    },
+    {
+        "name": "Accessibility Standards",
+        "description": "Standards for ensuring product accessibility (WCAG 2.1 AA)",
+        "file_patterns": ["src/**/*.html", "src/**/*.jsx", "src/**/*.tsx", "src/**/*.vue", "src/**/*.svelte"],
+        "documentation": "docs/cross-functional/accessibility.md"
     }
   ]
 } 

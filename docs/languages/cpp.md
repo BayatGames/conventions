@@ -256,6 +256,7 @@ UseTab: Never
 - Enum names should use CamelCase
 - Enum values should use kCamelCase (with k prefix)
 - Example:
+
   ```cpp
   enum class LogLevel {
     kDebug,
@@ -284,6 +285,7 @@ UseTab: Never
 - Prefer using `std::make_unique` and `std::make_shared` over direct constructor calls
 
 Example:
+
 ```cpp
 // Prefer this:
 auto user = std::make_unique<User>("John", 30);
@@ -300,6 +302,7 @@ std::unique_ptr<User> user(new User("John", 30));
 - Use containers and smart pointers to manage collections and object lifetimes
 
 Example:
+
 ```cpp
 class FileHandler {
  public:
@@ -396,6 +399,7 @@ project_name/
 - Prefer to use find_package for dependencies when available
 
 Example CMakeLists.txt:
+
 ```cmake
 cmake_minimum_required(VERSION 3.14)
 project(ProjectName VERSION 1.0.0 LANGUAGES CXX)
@@ -482,6 +486,7 @@ install(DIRECTORY include/
 - Alternatively, use traditional include guards with project-specific prefix
 
 Example:
+
 ```cpp
 // Using #pragma once
 #pragma once
@@ -508,6 +513,7 @@ Example:
 - Use quotes for project headers (`"header.h"`)
 
 Example:
+
 ```cpp
 // In foo.cpp
 #include "foo.h"  // Related header
@@ -531,6 +537,7 @@ Example:
 - Include the full header when using derived classes, template details, or inlined functions
 
 Example:
+
 ```cpp
 // Forward declarations
 namespace bayat {
@@ -553,6 +560,7 @@ void ProcessUser(const bayat::User* user);
 - Consider creating a hierarchy of custom exception classes for your project
 
 Example:
+
 ```cpp
 class DatabaseError : public std::runtime_error {
  public:
@@ -622,6 +630,7 @@ void ConnectToDatabase() {
 - Use range-based for loops when possible
 
 Example:
+
 ```cpp
 // Less efficient
 void ProcessNames(std::vector<std::string> names) {  // Copies the entire vector
@@ -660,6 +669,7 @@ void ProcessNames(const std::vector<std::string>& names) {  // Reference, no cop
 - Always lock in the same order to avoid deadlocks
 
 Example:
+
 ```cpp
 class ThreadSafeCounter {
  public:
@@ -697,6 +707,7 @@ class ThreadSafeCounter {
 - Be careful with capturing variables in lambdas for async operations
 
 Example:
+
 ```cpp
 std::future<int> ComputeValueAsync() {
   return std::async(std::launch::async, []() {
@@ -745,6 +756,7 @@ void UseAsyncValue() {
 - Use secure random number generators for cryptographic purposes
 
 Example:
+
 ```cpp
 // Insecure - vulnerable to timing attacks
 bool VerifyPasswordInsecure(const std::string& stored_hash, const std::string& input) {
@@ -778,6 +790,7 @@ bool VerifyPasswordSecure(const std::string& stored_hash, const std::string& inp
 - Name test files with a `_test` suffix (e.g., `string_processor_test.cpp`)
 
 Example (using Google Test):
+
 ```cpp
 #include <gtest/gtest.h>
 #include "string_processor.h"
@@ -830,6 +843,7 @@ TEST(StringProcessorTest, ProcessEmptyString) {
 - Keep documentation close to the code (in header files)
 
 Example:
+
 ```cpp
 /**
  * @brief Processes a string according to defined rules.
@@ -887,6 +901,7 @@ std::string Process(const std::string& input);
 #### Visual Studio Code
 
 Recommended extensions:
+
 - C/C++ (Microsoft)
 - CMake Tools
 - CMake
@@ -895,6 +910,7 @@ Recommended extensions:
 - C++ TestMate
 
 Settings (settings.json):
+
 ```json
 {
   "C_Cpp.clang_format_fallbackStyle": "Google",
@@ -919,4 +935,10 @@ Settings (settings.json):
 - Enable clang-format
 - Configure CMake integration
 - Enable Clang-Tidy integration
-- Use Google style as base formatting style 
+- Use Google style as base formatting style
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

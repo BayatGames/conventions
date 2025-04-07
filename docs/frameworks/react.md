@@ -10,6 +10,7 @@ Change Log:
 # React Development Conventions
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
 3. [Component Architecture](#component-architecture)
@@ -408,4 +409,10 @@ const Button = ({
 }) => {
   // Implementation
 };
-``` 
+```
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

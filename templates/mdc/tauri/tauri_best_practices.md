@@ -143,7 +143,7 @@ This document outlines best practices for Tauri application development accordin
   }
   ```
 
-- **Use appropriate concurrency primitives** (Mutex, RwLock) for shared state
+- **Use appropriate concurrency primitives** (e.g., `std::sync::Mutex`, `tokio::sync::Mutex`, `std::sync::RwLock`) for shared state, ensuring thread safety.
 - **Consider thread safety** when designing state access patterns
 
 ### Resource Usage

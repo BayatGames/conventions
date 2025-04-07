@@ -233,12 +233,12 @@ The code review process itself should be regularly reviewed:
 
 ## Additional Resources
 
-- \1\2) - Our branching and merging strategy
-- \1\2) - Specific standards for C# code
-- \1\2) - Unity-specific guidelines
+- [Bayat Git Flow](docs/git/flow.md) - Our branching and merging strategy
+- [C# Coding Conventions](docs/languages/csharp.md) - Specific standards for C# code
+- [Unity Development Standards](docs/frameworks/unity.md) - Unity-specific guidelines
 
 ## Version History
 
 | Version | Date | Description |
 |---------|------|-------------|
-| 1.0 | YYYY-MM-DD | Initial version | 
+| 1.0 | 2025-03-20 | Initial version |

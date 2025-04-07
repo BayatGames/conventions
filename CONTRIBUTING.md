@@ -11,6 +11,7 @@ Thank you for your interest in contributing to our development conventions! This
 - [Pull Request Process](#pull-request-process)
 - [Documentation Standards](#documentation-standards)
 - [Review Process](#review-process)
+- [Code Contribution Guidelines](#code-contribution-guidelines)
 
 ## Code of Conduct
 
@@ -84,5 +85,20 @@ All contributions will be reviewed by the platform team. The review process incl
 4. Feedback and requested changes if necessary
 
 Significant changes to conventions may require broader stakeholder review and approval.
+
+## Code Contribution Guidelines
+
+To ensure consistency and quality, please adhere to the following guidelines when contributing code:
+
+1. **Follow Coding Standards**: Ensure your code follows the relevant language and framework conventions documented in the `docs` directory. Key standards include:
+    - [JavaScript Conventions](docs/languages/javascript.md)
+    - [TypeScript Conventions](docs/languages/typescript.md)
+    - [React Conventions](docs/frameworks/react.md)
+    - (Refer to the `docs/languages` and `docs/frameworks` directories for others)
+2. **Write Tests**: Include appropriate unit, integration, or end-to-end tests for your changes. Refer to the [Testing Standards](docs/quality/testing.md).
+3. **Document Your Code**: Add necessary comments and documentation following the [Code Documentation Standards](docs/documentation/code.md).
+4. **Follow Git Conventions**: Use the [Bayat Git Flow](docs/git/flow.md) and adhere to the [Commit Message Standards](docs/git/commits.md).
+5. **Pass CI Checks**: Ensure all automated checks (linting, tests, builds) pass before submitting a Pull Request.
+6. **Code Reviews**: Participate actively in the code review process as outlined in the [Code Review Standards](docs/quality/code-reviews.md).
 
 Thank you for contributing to our development conventions!

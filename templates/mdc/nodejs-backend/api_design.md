@@ -116,6 +116,12 @@ GET /api/getUserOrders/123
   - `GET /api/users?limit=10&offset=20`
   - `GET /api/users?page=2&pageSize=10`
 
+## Documentation
+
+- Use OpenAPI (Swagger) specification for API documentation
+- Keep documentation up-to-date with API changes
+- Include clear descriptions, parameters, and example responses
+
 ## Authentication
 
 - Use OAuth 2.0 or JWT for authentication

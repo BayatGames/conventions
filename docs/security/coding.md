@@ -73,7 +73,7 @@ Apply validation to all input sources:
 
 ### Examples
 
-#### JavaScript/TypeScript Input Validation Example:
+#### JavaScript/TypeScript Input Validation Example
 
 ```javascript
 // Using validation library (e.g., Joi, Yup, Zod)
@@ -104,7 +104,7 @@ function processUserData(userData) {
 }
 ```
 
-#### Java Input Validation Example:
+#### Java Input Validation Example
 
 ```java
 import javax.validation.constraints.*;
@@ -173,7 +173,7 @@ Implement safe output practices:
 
 ### Examples
 
-#### HTML Context Encoding (JavaScript):
+#### HTML Context Encoding (JavaScript)
 
 ```javascript
 import { encodeForHTML } from 'your-security-library';
@@ -188,7 +188,7 @@ function displayUserProfile(user) {
 }
 ```
 
-#### Template Engine with Automatic Encoding (Node.js/Express/EJS):
+#### Template Engine with Automatic Encoding (Node.js/Express/EJS)
 
 ```javascript
 // In Express app setup
@@ -253,7 +253,7 @@ Implement effective authorization:
 
 ### Examples
 
-#### Password Hashing (Node.js):
+#### Password Hashing (Node.js)
 
 ```javascript
 const bcrypt = require('bcrypt');
@@ -278,7 +278,7 @@ async function verifyPassword(plaintext, hash) {
 }
 ```
 
-#### Authorization Middleware (Express.js):
+#### Authorization Middleware (Express.js)
 
 ```javascript
 // Role-based authorization middleware
@@ -331,7 +331,7 @@ Configure cookies securely:
 
 ### Examples
 
-#### Secure Session Configuration (Express.js):
+#### Secure Session Configuration (Express.js)
 
 ```javascript
 const express = require('express');
@@ -429,7 +429,7 @@ Implement robust key management:
 
 ### Examples
 
-#### Data Encryption (Java):
+#### Data Encryption (Java)
 
 ```java
 import javax.crypto.Cipher;
@@ -513,7 +513,7 @@ Implement database access control:
 
 ### Examples
 
-#### Parameterized Queries (Python/SQLAlchemy):
+#### Parameterized Queries (Python/SQLAlchemy)
 
 ```python
 from sqlalchemy import text
@@ -531,7 +531,7 @@ def get_user_by_username(session, username):
         raise DatabaseError("Error retrieving user data")
 ```
 
-#### ORM Usage (JavaScript/TypeORM):
+#### ORM Usage (JavaScript/TypeORM)
 
 ```javascript
 import { getRepository } from "typeorm";
@@ -587,7 +587,7 @@ Prevent path traversal:
 
 ### Examples
 
-#### Secure File Upload (Node.js):
+#### Secure File Upload (Node.js)
 
 ```javascript
 const path = require('path');
@@ -668,7 +668,7 @@ For C/C++ code:
 
 ### Examples
 
-#### Buffer Operations in C:
+#### Buffer Operations in C
 
 ```c
 #include <string.h>
@@ -750,7 +750,7 @@ Follow secure logging practices:
 
 ### Examples
 
-#### Secure Error Handling (Java):
+#### Secure Error Handling (Java)
 
 ```java
 import org.slf4j.Logger;
@@ -783,7 +783,7 @@ public class PaymentProcessor {
 }
 ```
 
-#### Secure Logging (C#):
+#### Secure Logging (C#)
 
 ```csharp
 using Microsoft.Extensions.Logging;
@@ -864,7 +864,7 @@ Secure API communications:
 
 ### Examples
 
-#### HTTPS Configuration (Node.js):
+#### HTTPS Configuration (Node.js)
 
 ```javascript
 const https = require('https');
@@ -919,30 +919,64 @@ httpRedirect.listen(80, () => {
 
 ### Dependency Management
 
-Manage third-party dependencies securely:
+Follow the [Dependency Management standards](docs/dependencies/management.md) for general guidelines on managing third-party dependencies.
+
+Specific security considerations include:
 
 - Use package managers with lockfiles
-- Pin dependency versions
-- Regularly update dependencies
-- Scan for vulnerabilities in dependencies
-- Maintain an inventory of dependencies
+- Pin dependency versions where practical
+- Regularly update dependencies to patch vulnerabilities
+- Scan dependencies for known vulnerabilities (see below)
+- Maintain an inventory of dependencies and their licenses
 - Use trusted sources and verify package integrity
-- Evaluate security of dependencies before adoption
+- Evaluate security posture of dependencies before adoption
 
-### Integration Security
+### Dependency Scanning
 
-Secure third-party integrations:
+Use dependency scanning tools to identify vulnerabilities in third-party libraries:
 
-- Apply the principle of least privilege
-- Validate data from third parties
-- Implement circuit breakers for external services
-- Monitor third-party API health
-- Use secure authentication with third parties
-- Document security requirements for integrations
+- **OWASP Dependency Check**: Scan for known vulnerabilities in dependencies
+- **Snyk**: Monitor for new vulnerabilities in dependencies
+- **WhiteSource**: Provide detailed dependency analysis
 
 ### Examples
 
-#### Secure Dependency Management (Node.js/npm):
+#### OWASP Dependency Check Configuration (Maven)
+
+```xml
+<!-- pom.xml -->
+<project>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>9.2.0</version> <!-- Use the latest version -->
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <!-- Optional: Configure suppression file -->
+          <!-- <suppressionFiles>
+            <suppressionFile>dependency-check-suppressions.xml</suppressionFile>
+          </suppressionFiles> -->
+          <!-- Optional: Fail build on CVSS score -->
+          <!-- <failBuildOnCVSS>8</failBuildOnCVSS> -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- ... other project configurations ... -->
+
+</project>
+```
+
+#### Secure Dependency Management (Node.js/npm)
 
 ```json
 // package.json
@@ -1034,7 +1068,7 @@ Use these testing tools:
 
 ### Examples
 
-#### ESLint Security Configuration:
+#### ESLint Security Configuration
 
 ```javascript
 // .eslintrc.js
@@ -1142,4 +1176,73 @@ Foster a security-aware culture:
 - Use blameless postmortems for security issues
 - Share security lessons learned
 - Continuously improve security review process
-- Build security champions within teams 
+- Build security champions within teams
+
+## Secure Coding
+
+Refer to the [Secure Coding Standards](docs/security/coding.md) for detailed guidelines on writing secure code across different languages and platforms.
+
+Key principles include:
+
+- Input validation and sanitization
+- Output encoding
+- Secure authentication and authorization
+- Proper error handling and logging
+- Protection against common vulnerabilities (OWASP Top 10)
+- Dependency security management
+
+Integrating security practices early and throughout the development process is crucial. See also: [DevSecOps Practices](docs/security/devsecops.md) and [Data Protection Standards](docs/security/data-protection.md).
+
+## Testing
+
+Refer to the [Testing Standards](docs/quality/testing.md) and [Frontend Testing Standards](docs/quality/frontend-testing.md) for comprehensive testing guidelines.
+
+Security-specific testing includes:
+
+- **Static Application Security Testing (SAST)**: Analyze source code for vulnerabilities.
+- **Dynamic Application Security Testing (DAST)**: Test running applications for vulnerabilities.
+- **Software Composition Analysis (SCA)**: Identify vulnerabilities in dependencies.
+- **Penetration Testing**: Simulate attacks to find weaknesses.
+- **Fuzz Testing**: Provide invalid or unexpected data to find crashes or vulnerabilities.
+
+## Incident Response
+
+Establish clear incident response procedures:
+
+- **Detection**: Monitor for security incidents.
+- **Containment**: Limit the impact of an incident.
+- **Eradication**: Remove the cause of the incident.
+- **Recovery**: Restore affected systems.
+- **Post-mortem**: Analyze the incident and improve defenses.
+
+## Compliance and Governance
+
+Ensure adherence to relevant security standards and regulations:
+
+- **GDPR**, **CCPA** for privacy compliance.
+- **PCI DSS** for payment processing.
+- **SOC 2**, **ISO 27001** for general security posture.
+- Internal security policies and standards.
+
+## Security Culture
+
+Foster a strong security culture:
+
+- **Training**: Regular security awareness and secure coding training.
+- **Security Champions**: Designate security experts within teams.
+- **Communication**: Share security updates and best practices.
+- **Responsibility**: Security is everyone's responsibility.
+
+## References
+
+- [OWASP Top 10](https://owasp.org/Top10/)
+- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
+- [NIST Secure Software Development Framework](https://csrc.nist.gov/Projects/ssdf)
+- [SANS Institute](https://www.sans.org/)
+- [CERT Secure Coding Standards](https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards)
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

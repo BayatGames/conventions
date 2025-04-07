@@ -85,6 +85,8 @@ Each new convention version should clearly document:
 
 ## Version Control Practices
 
+Follow Bayat's standard [Git Flow](docs/git/flow.md) and [Commit Conventions](docs/git/commits.md).
+
 ### Git Tags
 
 All releases must be tagged in the repository:
@@ -93,6 +95,7 @@ All releases must be tagged in the repository:
 - Release: `v1.0.0`
 
 Tags must be annotated with release notes:
+
 ```bash
 git tag -a v1.0.0 -m "Release v1.0.0: Summary of changes"
 ```
@@ -257,4 +260,10 @@ Version releases must be communicated through:
 - **API**: Application Programming Interface
 - **LTS**: Long-Term Support
 - **EOL**: End of Life
-- **Deprecation**: Process of marking features as obsolete before removal 
+- **Deprecation**: Process of marking features as obsolete before removal
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

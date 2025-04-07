@@ -21,4 +21,6 @@ For more detailed documentation, refer to the full convention docs:
 
 - [C# Standards](../../../docs/languages/csharp.md)
 - [Unity Standards](../../../docs/frameworks/unity.md)
+- [Test Coverage](../../../docs/quality/testing.md)
+- [Dependency Management](../../../docs/dependencies/management.md)
 - [Game Architecture](../../../docs/architecture/game.md)

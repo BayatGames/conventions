@@ -10,6 +10,7 @@ Change Log:
 # Node.js Development Conventions
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
 3. [Coding Style](#coding-style)
@@ -956,4 +957,10 @@ await publishEvent(
 - Create release branches
 - Tag releases
 - Maintain a changelog
-- Automate the release process 
+- Automate the release process
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

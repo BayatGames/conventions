@@ -49,12 +49,14 @@ All code documentation at Bayat should adhere to the following core principles:
 Use inline comments to explain complex logic, important decisions, or non-obvious code.
 
 **Do:**
+
 - Comment on "why" rather than "what" when the code itself is clear
 - Add comments for complex algorithms or business logic
 - Document workarounds, temporary solutions, or known limitations
 - Use TODO comments for future enhancements (with ticket numbers)
 
 **Don't:**
+
 - Add comments that repeat what the code obviously does
 - Leave outdated or incorrect comments
 - Add commented-out code into production codebase
@@ -175,7 +177,7 @@ def process_user_data(user_id: int, data: dict) -> tuple[bool, Optional[str]]:
     # Implementation
 ```
 
-### C#
+### C #
 
 Use XML documentation comments for C# code:
 
@@ -442,3 +444,9 @@ Example deprecation notice:
  * const result = await processPaymentV2({ amount: 1000, currency: 'USD' });
  */
 ```
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

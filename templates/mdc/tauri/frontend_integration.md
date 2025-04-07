@@ -91,27 +91,8 @@ This document outlines best practices for integrating frontend frameworks with T
 
 ### Data Persistence
 
-- **Use Tauri's filesystem API** for local storage needs:
-
-  ```typescript
-  import { writeTextFile, readTextFile } from '@tauri-apps/api/fs';
-  
-  // Save state to file
-  async function saveAppState(state) {
-    await writeTextFile('app.json', JSON.stringify(state));
-  }
-  
-  // Load state from file
-  async function loadAppState() {
-    try {
-      const content = await readTextFile('app.json');
-      return JSON.parse(content);
-    } catch (error) {
-      console.error('Failed to load state:', error);
-      return defaultState;
-    }
-  }
-  ```
+- **Use Tauri's filesystem API** (`@tauri-apps/api/fs`) for local storage needs.
+- **Consider Tauri's Store plugin** (`@tauri-apps/plugin-store`) for simple key-value persistence.
 
 - **Consider using a database** for complex data:
   - SQLite through Tauri commands

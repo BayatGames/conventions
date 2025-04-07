@@ -6,13 +6,20 @@
       "description": "Rules for commit messages following conventional commits specification",
       "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
       "file_patterns": [".git/COMMIT_EDITMSG"],
-      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description",
+      "documentation": "docs/git/commits.md"
     },
     {
       "name": "TypeScript Standards",
       "description": "TypeScript coding standards and best practices",
       "file_patterns": ["*.ts", "*.tsx"],
       "documentation": ".cursor/mdc/typescript.md"
+    },
+    {
+      "name": "JavaScript Standards",
+      "description": "JavaScript coding standards and best practices",
+      "file_patterns": ["*.js", "*.jsx"],
+      "documentation": "docs/languages/javascript.md"
     },
     {
       "name": "React Standards",
@@ -29,20 +36,91 @@
     {
       "name": "State Management",
       "description": "State management patterns and best practices",
-      "file_patterns": ["**/store/**/*.ts", "**/context/**/*.ts", "**/hooks/use*.ts"],
-      "documentation": ".cursor/mdc/state_management.md"
+      "file_patterns": ["**/store/**/*.ts", "**/context/**/*.ts", "**/hooks/use*.ts"]
     },
     {
-      "name": "Test Standards",
-      "description": "React testing best practices",
+      "name": "Frontend Testing Standards",
+      "description": "Standards and best practices for frontend testing",
       "file_patterns": ["**/*.test.tsx", "**/*.test.ts", "**/*.spec.tsx", "**/*.spec.ts"],
-      "documentation": ".cursor/mdc/testing.md"
+      "documentation": "docs/quality/frontend-testing.md"
     },
     {
       "name": "Styling Standards",
       "description": "CSS and styling best practices",
-      "file_patterns": ["*.css", "*.scss", "*.module.css", "*.module.scss", "**/styles/*.ts"],
-      "documentation": ".cursor/mdc/styling.md"
+      "file_patterns": ["*.css", "*.scss", "*.module.css", "*.module.scss", "**/styles/*.ts"]
+    },
+    {
+      "name": "Git Flow",
+      "description": "Branch naming and workflow standards",
+      "file_patterns": [".git/HEAD"],
+      "pattern": "refs/heads/(main|master|develop|feature/|bugfix/|hotfix/|release/)",
+      "documentation": "docs/git/flow.md"
+    },
+    {
+      "name": "Documentation Standards",
+      "description": "Documentation requirements and formatting",
+      "file_patterns": ["**/*.md", "**/*.mdx"],
+      "documentation": "docs/documentation/technical.md"
+    },
+    {
+      "name": "Bayat Naming Conventions",
+      "description": "Namespace and package identifier standards for Bayat projects",
+      "file_patterns": ["**/*.ts", "**/*.js", "**/package.json"],
+      "documentation": "docs/general/naming.md"
+    },
+    {
+      "name": "Code Documentation Standards",
+      "description": "Standards for documenting code (comments, docstrings, etc.)",
+      "file_patterns": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+      "documentation": "docs/documentation/code.md"
+    },
+    {
+      "name": "Secure Coding Standards",
+      "description": "Guidelines for writing secure code",
+      "file_patterns": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+      "documentation": "docs/security/coding.md"
+    },
+    {
+      "name": "CI/CD Standards",
+      "description": "Standards for Continuous Integration and Continuous Delivery pipelines",
+      "file_patterns": [".github/workflows/*.yml", ".github/workflows/*.yaml"],
+      "documentation": "docs/quality/ci-cd.md"
+    },
+    {
+      "name": "Code Review Standards",
+      "description": "Guidelines for conducting effective code reviews",
+      "file_patterns": ["**/*"],
+      "documentation": "docs/quality/code-reviews.md"
+    },
+    {
+      "name": "Dependency Management",
+      "description": "Standards for managing project dependencies",
+      "file_patterns": ["**/package.json"],
+      "documentation": "docs/dependencies/management.md"
+    },
+    {
+      "name": "Git Repository Standards",
+      "description": "Standards for naming, structuring, and configuring Git repositories",
+      "file_patterns": ["README.md", ".gitignore", ".gitattributes"],
+      "documentation": "docs/git/repos.md"
+    },
+    {
+        "name": "Node.js Standards",
+        "description": "Node.js development patterns and best practices (relevant for tooling)",
+        "file_patterns": ["*.js", "*.mjs", "*.cjs", "*.ts", "**/package.json"],
+        "documentation": "docs/frameworks/nodejs.md"
+    },
+    {
+        "name": "Versioning Standards",
+        "description": "Standards for software and convention versioning",
+        "file_patterns": ["**/package.json", "CHANGELOG.md"],
+        "documentation": "docs/versioning/standards.md"
+    },
+    {
+        "name": "Accessibility Standards",
+        "description": "Standards for ensuring product accessibility (WCAG 2.1 AA)",
+        "file_patterns": ["**/*.html", "**/*.jsx", "**/*.tsx"],
+        "documentation": "docs/cross-functional/accessibility.md"
     }
   ]
 } 

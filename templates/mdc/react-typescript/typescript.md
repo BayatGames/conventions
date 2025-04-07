@@ -66,3 +66,4 @@
 - Prefer interfaces for object shapes used across the codebase
 - Use enums for predefined sets of values
 - Use generics for reusable components and functions
+- Leverage utility types (e.g., `Partial`, `Required`, `Pick`, `Omit`) for type transformations

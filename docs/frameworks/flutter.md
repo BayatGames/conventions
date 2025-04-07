@@ -10,6 +10,7 @@ Change Log:
 # Flutter Development Conventions
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
 3. [Naming Conventions](#naming-conventions)
@@ -613,4 +614,10 @@ class PrimaryButton extends StatelessWidget {
 - Document setup and installation steps
 - Create architecture diagrams
 - Document state management approach
-- Include troubleshooting guides 
+- Include troubleshooting guides
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

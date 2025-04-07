@@ -50,7 +50,7 @@ This document outlines the standards and best practices for Unity development at
 
 ### Project Structure
 
-Organize Unity projects according to our \1\2#game-projects).
+Organize Unity projects according to our [Git Repositories Conventions](docs/git/repos.md#game-projects).
 
 ## Asset Organization
 
@@ -58,7 +58,7 @@ Organize Unity projects according to our \1\2#game-projects).
 
 The Assets folder should follow this structure:
 
-```
+```plaintext
 Assets/
 ├── _Project/              # Project-specific assets
 │   ├── Art/               # All art assets
@@ -109,6 +109,7 @@ Use consistent naming patterns for all assets:
 | Audio | SFX_Category_Description | `SFX_Weapon_Gunshot.wav` |
 
 Where common prefixes include:
+
 - T_ for textures
 - M_ for models
 - Mat_ for materials
@@ -187,7 +188,7 @@ For larger projects, use a multi-scene approach:
 
 ## Scripting Conventions
 
-Follow the \1\2) with these Unity-specific additions:
+Follow the [C# Coding Standards](docs/languages/csharp.md) with these Unity-specific additions:
 
 ### MonoBehaviour Lifecycle
 
@@ -209,6 +210,7 @@ Follow the \1\2) with these Unity-specific additions:
 - Provide tooltips for non-obvious fields
 
 Example:
+
 ```csharp
 [Header("Movement Parameters")]
 [SerializeField, Tooltip("Maximum movement speed in units per second")]
@@ -263,6 +265,7 @@ public class PlayerMovement : MonoBehaviour
 - Unsubscribe from events when objects are destroyed
 
 Example of ScriptableObject-based event:
+
 ```csharp
 [CreateAssetMenu(fileName = "GameEvent", menuName = "Events/Game Event")]
 public class GameEvent : ScriptableObject
@@ -373,11 +376,12 @@ public class GameEvent : ScriptableObject
 
 ## Version Control
 
-Follow the \1\2) conventions with these Unity-specific additions:
+Follow the [Bayat Git Flow](docs/git/flow.md) conventions with these Unity-specific additions:
 
 ### Unity-Specific .gitignore
 
 Use appropriate .gitignore settings for Unity projects:
+
 - Exclude Library, Temp, Logs, and UserSettings folders
 - Exclude build outputs
 - Include appropriate .meta files
@@ -415,4 +419,4 @@ When multiple team members are working in Unity:
 
 | Version | Date | Description |
 |---------|------|-------------|
-| 1.0 | YYYY-MM-DD | Initial version | 
+| 1.0 | 2025-03-20 | Initial version |

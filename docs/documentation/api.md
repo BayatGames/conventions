@@ -227,6 +227,7 @@ curl -X POST \
 ## Notes
 
 Additional notes, edge cases, or limitations to be aware of.
+
 ```
 
 ## OpenAPI/Swagger Standards
@@ -458,7 +459,7 @@ Authentication documentation must include:
 
 ### OAuth 2.0 Example
 
-```
+````markdown
 # OAuth 2.0 Authentication
 
 Our API uses OAuth 2.0 for authentication. We support the following grant types:
@@ -507,7 +508,7 @@ This flow is recommended for server-side applications.
    ```bash
    curl -H "Authorization: Bearer ACCESS_TOKEN" https://api.bayat.io/v1/users/me
    ```
-```
+````
 
 ## Error Handling Documentation
 
@@ -529,7 +530,7 @@ Error documentation must include:
 
 ### Error Documentation Example
 
-```
+````markdown
 # Error Handling
 
 ## Error Response Format
@@ -570,7 +571,7 @@ All API errors are returned in a consistent JSON format:
 | validation_error | 400 | The request data failed validation | Check the details field for specific validation failures |
 | rate_limit_exceeded | 429 | You've exceeded your rate limit | Slow down your request rate and try again later |
 | internal_server_error | 500 | Something went wrong on our end | Contact support with the request_id |
-```
+````
 
 ## Versioning Documentation
 
@@ -592,7 +593,7 @@ API versioning documentation must include:
 
 ### Versioning Documentation Example
 
-```
+````markdown
 # API Versioning
 
 ## Version Structure
@@ -600,8 +601,9 @@ API versioning documentation must include:
 Our API uses URL-based versioning, with the version as the first path segment:
 
 ```
-https://api.bayat.io/v1/resources
-https://api.bayat.io/v2/resources
+<https://api.bayat.io/v1/resources>
+<https://api.bayat.io/v2/resources>
+
 ```
 
 ## Current Versions
@@ -632,7 +634,7 @@ V2 includes the following breaking changes:
    - Tokens expire after 24 hours (was 7 days in v1)
 
 See our [detailed migration guide](https://docs.bayat.io/api/migration/v1-to-v2) for code examples.
-```
+````
 
 ## Internationalization (i18n)
 
@@ -660,16 +662,19 @@ For APIs that support internationalization:
 Choose the appropriate tools based on your API type:
 
 **REST APIs**:
+
 - OpenAPI/Swagger with Swagger UI
 - ReDoc
 - Stoplight Studio
 
 **GraphQL APIs**:
+
 - GraphQL Playground
 - GraphiQL
 - Apollo Studio Explorer
 
 **General Documentation**:
+
 - Markdown for baseline documentation
 - Docusaurus for documentation websites
 - Postman for interactive collections
@@ -723,4 +728,10 @@ To maintain accurate documentation:
 3. **Monitoring**:
    - Track documentation usage and feedback
    - Identify most-viewed and most-confused areas
-   - Analyze support requests to identify documentation gaps 
+   - Analyze support requests to identify documentation gaps
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 1.0 | 2025-03-20 | Initial version |

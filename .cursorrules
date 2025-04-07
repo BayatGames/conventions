@@ -6,7 +6,8 @@
       "description": "Rules for commit messages following conventional commits specification",
       "pattern": "^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\(\\w+\\))?:\\s",
       "file_patterns": [".git/COMMIT_EDITMSG"],
-      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description"
+      "message": "Commit messages should follow the Conventional Commits standard: type(scope): description",
+      "documentation": "docs/git/commits.md"
     },
     {
       "name": "TypeScript Standards",
@@ -62,6 +63,162 @@
       "description": "Namespace and package identifier standards for Bayat projects",
       "file_patterns": ["**/*.cs", "**/*.ts", "**/*.js", "**/*.rs", "**/package.json", "**/Cargo.toml", "**/*.asmdef"],
       "documentation": "docs/general/naming.md"
+    },
+    {
+      "name": "Python Standards",
+      "description": "Python coding standards and best practices",
+      "file_patterns": ["*.py"],
+      "documentation": "docs/languages/python.md"
+    },
+    {
+      "name": "C# Standards",
+      "description": "C# coding standards and best practices",
+      "file_patterns": ["*.cs"],
+      "documentation": "docs/languages/csharp.md"
+    },
+    {
+      "name": "Code Documentation Standards",
+      "description": "Standards for documenting code (comments, docstrings, etc.)",
+      "file_patterns": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.py", "**/*.cs", "**/*.java", "**/*.cpp", "**/*.h"],
+      "documentation": "docs/documentation/code.md"
+    },
+    {
+      "name": "API Documentation Standards",
+      "description": "Standards for documenting APIs (OpenAPI, etc.)",
+      "file_patterns": ["**/api/**/*.yaml", "**/api/**/*.json", "**/swagger.json", "**/openapi.yaml"],
+      "documentation": "docs/documentation/api.md"
+    },
+    {
+      "name": "Secure Coding Standards",
+      "description": "Guidelines for writing secure code",
+      "file_patterns": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.py", "**/*.cs", "**/*.java", "**/*.go", "**/*.php"],
+      "documentation": "docs/security/coding.md"
+    },
+    {
+      "name": "CI/CD Standards",
+      "description": "Standards for Continuous Integration and Continuous Delivery pipelines",
+      "file_patterns": [".github/workflows/*.yml", ".github/workflows/*.yaml", "Jenkinsfile", ".gitlab-ci.yml"],
+      "documentation": "docs/quality/ci-cd.md"
+    },
+    {
+      "name": "Code Review Standards",
+      "description": "Guidelines for conducting effective code reviews",
+      "file_patterns": ["**/*"],
+      "documentation": "docs/quality/code-reviews.md"
+    },
+    {
+      "name": "Dependency Management",
+      "description": "Standards for managing project dependencies",
+      "file_patterns": ["**/package.json", "**/requirements.txt", "**/pom.xml", "**/build.gradle", "**/Cargo.toml", "**/*.csproj"],
+      "documentation": "docs/dependencies/management.md"
+    },
+    {
+      "name": "Architecture Decision Records",
+      "description": "Standards for documenting architectural decisions",
+      "file_patterns": ["docs/architecture/adr/*.md", "docs/adr/*.md", "**/adr/*.md"],
+      "documentation": "docs/architecture/architecture-decision-records.md"
+    },
+    {
+      "name": "Authentication Standards",
+      "description": "Guidelines for implementing secure authentication",
+      "file_patterns": ["**/auth*/**/*.{js,ts,py,cs,java,go}", "**/security*/**/*.{js,ts,py,cs,java,go}", "**/login*/**/*.{js,ts,py,cs,java,go}"],
+      "documentation": "docs/security/authentication.md"
+    },
+    {
+      "name": "Git Repository Standards",
+      "description": "Standards for naming, structuring, and configuring Git repositories",
+      "file_patterns": ["README.md", ".gitignore", ".gitattributes"],
+      "documentation": "docs/git/repos.md"
+    },
+    {
+      "name": "C++ Standards",
+      "description": "C++ coding standards and best practices",
+      "file_patterns": ["*.cpp", "*.h", "*.hpp", "*.cc", "*.cxx"],
+      "documentation": "docs/languages/cpp.md"
+    },
+    {
+      "name": "Java Standards",
+      "description": "Java coding standards and best practices",
+      "file_patterns": ["*.java"],
+      "documentation": "docs/languages/java.md"
+    },
+    {
+      "name": "Rust Standards",
+      "description": "Rust coding standards and best practices",
+      "file_patterns": ["*.rs"],
+      "documentation": "docs/languages/rust.md"
+    },
+    {
+      "name": "Go Standards",
+      "description": "Go coding standards and best practices",
+      "file_patterns": ["*.go"],
+      "documentation": "docs/languages/go.md"
+    },
+    {
+      "name": "Node.js Standards",
+      "description": "Node.js development patterns and best practices",
+      "file_patterns": ["*.js", "*.mjs", "*.cjs", "*.ts", "**/package.json"],
+      "documentation": "docs/frameworks/nodejs.md"
+    },
+    {
+      "name": "Unity Standards",
+      "description": "Unity development patterns and best practices",
+      "file_patterns": ["*.cs", "*.unity", "*.prefab", "*.asset"],
+      "documentation": "docs/frameworks/unity.md"
+    },
+    {
+      "name": "Angular Standards",
+      "description": "Angular development patterns and best practices",
+      "file_patterns": ["*.ts", "*.html", "*.scss", "*.css", "angular.json"],
+      "documentation": "docs/frameworks/angular.md"
+    },
+    {
+      "name": "Flutter Standards",
+      "description": "Flutter development patterns and best practices",
+      "file_patterns": ["*.dart", "pubspec.yaml"],
+      "documentation": "docs/frameworks/flutter.md"
+    },
+    {
+      "name": "Microservices Architecture Standards",
+      "description": "Standards for designing, building, and operating microservices",
+      "file_patterns": ["**/*service*/**/*.js", "**/*service*/**/*.ts", "**/*service*/**/*.py", "**/*service*/**/*.cs", "**/*service*/**/*.java", "**/*service*/**/*.go"],
+      "documentation": "docs/architecture/microservices.md"
+    },
+    {
+      "name": "Database Standards",
+      "description": "Standards for database design, development, and management",
+      "file_patterns": ["**/*.sql", "**/migrations/*.js", "**/migrations/*.ts", "**/models/*.js", "**/models/*.ts", "**/schemas/*.json"],
+      "documentation": "docs/architecture/database-standards.md"
+    },
+    {
+      "name": "Architecture Diagram Standards",
+      "description": "Standards for creating architecture diagrams",
+      "file_patterns": ["docs/architecture/diagrams/*.puml", "docs/architecture/diagrams/*.drawio", "docs/architecture/diagrams/*.md"],
+      "documentation": "docs/architecture/architecture-diagrams.md"
+    },
+    {
+      "name": "Code Refactoring Guidelines",
+      "description": "Guidelines for when and how to approach code refactoring",
+      "file_patterns": ["**/*.js", "**/*.ts", "**/*.py", "**/*.cs", "**/*.java", "**/*.go", "**/*.cpp"],
+      "documentation": "docs/quality/code-refactoring.md"
+    },
+    {
+      "name": "Frontend Testing Standards",
+      "description": "Standards and best practices for frontend testing",
+      "file_patterns": ["**/*.test.js", "**/*.spec.js", "**/*.test.ts", "**/*.spec.ts", "**/*.test.jsx", "**/*.spec.jsx", "**/*.test.tsx", "**/*.spec.tsx"],
+      "documentation": "docs/quality/frontend-testing.md"
+    },
+    {
+      "name": "Versioning Standards",
+      "description": "Standards for software and convention versioning",
+      "file_patterns": ["**/package.json", "**/*.csproj", "**/pom.xml", "**/build.gradle", "**/Cargo.toml", "CHANGELOG.md"],
+      "documentation": "docs/versioning/standards.md"
+    },
+    {
+      "name": "Accessibility Standards",
+      "description": "Standards for ensuring product accessibility (WCAG 2.1 AA)",
+      "file_patterns": ["**/*.html", "**/*.jsx", "**/*.tsx", "**/*.vue", "**/*.svelte"],
+      "documentation": "docs/cross-functional/accessibility.md"
     }
   ]
 } 

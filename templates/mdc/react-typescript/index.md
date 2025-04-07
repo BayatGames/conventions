@@ -21,3 +21,4 @@ For more detailed documentation, refer to the full convention docs:
 - [TypeScript Standards](../../../docs/languages/typescript.md)
 - [React Standards](../../../docs/frameworks/react.md)
 - [Frontend Architecture](../../../docs/architecture/frontend.md)
+- [Frontend Testing Standards](../../../docs/quality/frontend-testing.md)

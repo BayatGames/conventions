@@ -155,38 +155,12 @@ private IEnumerator DelayedAction(float delay)
 
 ### Unity Events
 
-- Use **UnityEvent** for inspector-exposed events:
-
-  ```csharp
-  [Serializable]
-  public class CustomEvent : UnityEvent<int> { }
-  
-  public CustomEvent OnValueChanged;
-  ```
+- Use **UnityEvent** for events exposed in the Inspector. Allows designers to hook up callbacks without code.
 
 ### C# Events
 
-- Use C# events for code-only communication:
-
-  ```csharp
-  public event Action<float> OnHealthChanged;
-  
-  private void ChangeHealth(float amount)
-  {
-      health += amount;
-      OnHealthChanged?.Invoke(health);
-  }
-  ```
+- Use C# events (`event Action<T>`) for code-only communication between scripts. More performant than UnityEvents.
 
 ### Message System
 
-- Consider a centralized message system for complex projects:
-
-  ```csharp
-  public class GameEventManager : MonoBehaviour
-  {
-      public static GameEventManager Instance { get; private set; }
-      
-      // Event declarations and Publish/Subscribe methods
-  }
-  ```
+- Consider a centralized message system (e.g., observer pattern) for complex projects to decouple components.
